@@ -1,52 +1,155 @@
-import { Search, User } from "lucide-react";
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import { Search, User, ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import Link from "next/link";
 
+const navItems = [
+  {
+    label: "Product Overview",
+    children: [
+      { label: "Capabilities", href: "/overview" },
+      { label: "Features", href: "/benefits" },
+      { label: "Modules", href: "/architecture" },
+    ],
+  },
+  {
+    label: "Solutions",
+    children: [
+      { label: "By Industry", href: "/capabilities/automation" },
+      { label: "By Professional Practice", href: "/capabilities/analytics" },
+      { label: "By Challenge", href: "/capabilities/integrations" },
+      { label: "By Expertise", href: "/capabilities/integrations" },
+    ],
+  },
+  {
+    label: "Customer",
+    children: [
+      { label: "Testimonials", href: "/modules/finance" },
+      { label: "Case Studies", href: "/modules/hr" },
+    ],
+  },
+  {
+    label: "Resources",
+    children: [
+      { label: "Knowledge Centre", href: "/solutions/enterprise" },
+      { label: "Blog", href: "/solutions/smes" },
+      { label: "Newsroom", href: "/solutions/public" },
+      { label: "Downloads Library", href: "/solutions/public" },
+      { label: "Apps & Integrations", href: "/solutions/public" },
+      {
+        label: "Community Training & Certifications",
+        href: "/solutions/public",
+      },
+      { label: "FAQs", href: "/solutions/public" },
+      { label: "Learning Certification Registry", href: "/solutions/public" },
+      { label: "What’s New", href: "/solutions/public" },
+    ],
+  },
+  {
+    label: "Company",
+    children: [
+      { label: "About Us", href: "/docs" },
+      { label: "Career", href: "/blog" },
+      { label: "Customers", href: "/case-studies" },
+      { label: "Affiliates", href: "/case-studies" },
+      { label: "Events", href: "/case-studies" },
+      { label: "Partners", href: "/case-studies" },
+      { label: "Consultants", href: "/case-studies" },
+      { label: "Reviews", href: "/case-studies" },
+      { label: "Press", href: "/case-studies" },
+      { label: "Brand Roadmap", href: "/case-studies" },
+    ],
+  },
+];
+
 export default function Navbar() {
+  const [openIndex, setOpenIndex] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const navRef = useRef(null);
+
+  /* 👆 Click outside to close */
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenIndex(null);
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <nav className="w-full  bg-[#1B1464]  border-b border-white/10">
+    <nav
+      ref={navRef}
+      className="sticky top-0 z-50 w-full bg-[#1B1464] border-b border-white/10"
+    >
       <div className="mx-auto max-w-[1440px] px-6">
         <div className="flex h-16 items-center justify-between">
-          
-          {/* Left: Logo */}
-          <div className="flex items-center gap-10">
-            <span className="text-white font-semibold tracking-wide">
-              BEAPOne UBOS
-            </span>
+          {/* Logo */}
+          <span className="text-white font-semibold tracking-wide">
+            BEAPOne UBOS
+          </span>
 
-            {/* Nav Links */}
-            <div className="hidden lg:flex items-center gap-6 text-sm text-white/80">
-              <Link href="#" className="hover:text-white transition">
-                Product Overview
-              </Link>
-              <Link href="#" className="hover:text-white transition">
-                Capabilities
-              </Link>
-              <Link href="#" className="hover:text-white transition">
-                Core Modules
-              </Link>
-              <Link href="#" className="hover:text-white transition">
-                Solutions Hub
-              </Link>
-              <Link href="#" className="hover:text-white transition">
-                Resources
-              </Link>
-            </div>
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-6 text-sm text-white/80">
+            {navItems.map((item, index) => {
+              const isOpen = openIndex === index;
+
+              return (
+                <div key={item.label} className="relative">
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown(index)}
+                    className="flex items-center gap-1 hover:text-white transition"
+                  >
+                    {item.label}
+                    {isOpen ? (
+                      <ChevronUp size={14} />
+                    ) : (
+                      <ChevronDown size={14} />
+                    )}
+                  </button>
+
+                  {isOpen && (
+                    <div className="absolute left-0 top-full mt-2 w-56 rounded-md bg-indigo-200 shadow-lg z-50">
+                      <ul className="py-2 text-sm text-gray-700">
+                        {item.children.map((child) => (
+                          <li key={child.label}>
+                            <Link
+                              href={child.href}
+                              className="block px-4 py-2 hover:bg-gray-100 transition"
+                              onClick={() => setOpenIndex(null)}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
-          {/* Right: Actions */}
-          <div className="flex items-center gap-4">
-            {/* Search */}
+          {/* Right Actions */}
+          <div className="hidden lg:flex items-center gap-4">
             <button className="text-white/80 hover:text-white transition">
               <Search size={18} />
             </button>
 
-            {/* Sign in */}
             <button className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
               <User size={18} />
               <span>Sign in</span>
             </button>
 
-            {/* Go to BEAPOne Lite */}
             <Link
               href="#"
               className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition"
@@ -54,7 +157,6 @@ export default function Navbar() {
               Go to BEAPOne Lite
             </Link>
 
-            {/* Contact Sales */}
             <Link
               href="#"
               className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition"
@@ -62,7 +164,58 @@ export default function Navbar() {
               Contact Sales
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden text-white"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
+
+        {/* 📱 Mobile Menu */}
+        {mobileOpen && (
+          <div className="lg:hidden border-t border-white/10 py-4 space-y-2">
+            {navItems.map((item, index) => {
+              const isOpen = openIndex === index;
+
+              return (
+                <div key={item.label}>
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="w-full flex items-center justify-between text-left text-white/90 px-2 py-2"
+                  >
+                    {item.label}
+                    {isOpen ? (
+                      <ChevronUp size={16} />
+                    ) : (
+                      <ChevronDown size={16} />
+                    )}
+                  </button>
+
+                  {isOpen && (
+                    <div className="pl-4">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          className="block py-2 text-sm text-white/70 hover:text-white"
+                          onClick={() => {
+                            setMobileOpen(false);
+                            setOpenIndex(null);
+                          }}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </nav>
   );
