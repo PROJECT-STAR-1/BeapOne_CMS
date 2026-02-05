@@ -40,7 +40,7 @@ export default function CustomerCareSection() {
         <div className="relative w-full md:w-[450px] flex justify-end md:static h-full">
           <div className="relative w-[340px] md:w-[460px] h-[520px] md:absolute md:bottom-0 md:right-0 z-30 pointer-events-none">
             <Image
-              src="/images/faqs/CustomerSupport.svg"
+              src="/images/CustomerSupport.svg"
               alt="Support Specialist"
               fill
               className="object-contain object-bottom scale-[1.7] md:scale-[1.8] origin-bottom translate-y-[1px]"
