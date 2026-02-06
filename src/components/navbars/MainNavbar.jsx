@@ -8,14 +8,15 @@ const navItems = [
   {
     label: "Product Overview",
     children: [
-      { label: "Capabilities", href: "/overview" },
-      { label: "Features", href: "/benefits" },
-      { label: "Modules", href: "/architecture" },
+      { label: "Capabilities", href: "/home/product/capabilities" },
+      { label: "Features", href: "/home/product/features" },
+      { label: "Modules", href: "/home/product/coreModules" },
     ],
   },
   {
     label: "Solutions",
     children: [
+      { label: "Solutions Hub", href: "/home/solutions/solutionsHub" },
       { label: "By Industry", href: "/capabilities/automation" },
       { label: "By Professional Practice", href: "/capabilities/analytics" },
       { label: "By Challenge", href: "/capabilities/integrations" },
@@ -41,7 +42,7 @@ const navItems = [
         label: "Community Training & Certifications",
         href: "/solutions/public",
       },
-      { label: "FAQs", href: "/solutions/public" },
+      { label: "FAQs", href: "/home/resources/faqs" },
       { label: "Learning Certification Registry", href: "/solutions/public" },
       { label: "What’s New", href: "/solutions/public" },
     ],
@@ -88,14 +89,15 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 z-50 w-full bg-[#1B1464] border-b border-white/10"
-    >
+      className="sticky top-0 z-50 w-full bg-[#1B1464] border-b border-white/10">
       <div className="mx-auto max-w-[1440px] px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <span className="text-white font-semibold tracking-wide">
-            BEAPOne UBOS
-          </span>
+          <a href="/home">
+            <span className="text-white font-semibold tracking-wide">
+              BEAPOne UBOS
+            </span>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-6 text-sm text-white/80">
@@ -107,8 +109,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => toggleDropdown(index)}
-                    className="flex items-center gap-1 hover:text-white transition"
-                  >
+                    className="flex items-center gap-1 hover:text-white transition">
                     {item.label}
                     {isOpen ? (
                       <ChevronUp size={14} />
@@ -125,8 +126,7 @@ export default function Navbar() {
                             <Link
                               href={child.href}
                               className="block px-4 py-2 hover:bg-gray-100 transition"
-                              onClick={() => setOpenIndex(null)}
-                            >
+                              onClick={() => setOpenIndex(null)}>
                               {child.label}
                             </Link>
                           </li>
@@ -152,15 +152,13 @@ export default function Navbar() {
 
             <Link
               href="#"
-              className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition"
-            >
+              className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition">
               Go to BEAPOne Lite
             </Link>
 
             <Link
               href="#"
-              className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition"
-            >
+              className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition">
               Contact Sales
             </Link>
           </div>
@@ -168,8 +166,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white"
-          >
+            className="lg:hidden text-white">
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -184,8 +181,7 @@ export default function Navbar() {
                 <div key={item.label}>
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="w-full flex items-center justify-between text-left text-white/90 px-2 py-2"
-                  >
+                    className="w-full flex items-center justify-between text-left text-white/90 px-2 py-2">
                     {item.label}
                     {isOpen ? (
                       <ChevronUp size={16} />
@@ -204,8 +200,7 @@ export default function Navbar() {
                           onClick={() => {
                             setMobileOpen(false);
                             setOpenIndex(null);
-                          }}
-                        >
+                          }}>
                           {child.label}
                         </Link>
                       ))}
