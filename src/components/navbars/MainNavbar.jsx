@@ -33,6 +33,7 @@ const navItems = [
   {
     label: "Resources",
     children: [
+      { label: "Resources", href: "/solutions/enterprise" },
       { label: "Knowledge Centre", href: "/solutions/enterprise" },
       { label: "Blog", href: "/solutions/smes" },
       { label: "Newsroom", href: "/solutions/public" },
