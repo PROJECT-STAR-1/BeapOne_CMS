@@ -4,9 +4,9 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full bg-[#030B1A] pt-32 pb-24 px-8 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#1B1464_0%,_transparent_50%)] opacity-60"></div>
-      <div className="max-w-7xl mx-auto relative z-10">
+    // Replaced the indigo gradient with the extracted bg-[#1B1464]
+    <section className="w-full bg-[#1B1464] py-20 px-8">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-6xl font-bold text-white tracking-tight mb-6">
           FAQs
         </h1>
