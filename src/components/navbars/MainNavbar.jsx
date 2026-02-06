@@ -43,7 +43,10 @@ const navItems = [
         href: "/solutions/public",
       },
       { label: "FAQs", href: "/home/resources/faqs" },
-      { label: "Learning Certification Registry", href: "/solutions/public" },
+      {
+        label: "Learning Certification Registry",
+        href: "/home/resources/certifications",
+      },
       { label: "What’s New", href: "/solutions/public" },
     ],
   },
