@@ -8,14 +8,15 @@ const navItems = [
   {
     label: "Product Overview",
     children: [
-      { label: "Capabilities", href: "/overview" },
-      { label: "Features", href: "/benefits" },
-      { label: "Modules", href: "/architecture" },
+      { label: "Capabilities", href: "/home/product/capabilities" },
+      { label: "Features", href: "/home/product/features" },
+      { label: "Modules", href: "/home/product/coreModules" },
     ],
   },
   {
     label: "Solutions",
     children: [
+       { label: "Solutions Hub", href: "/home/solutions/solutionsHub" },
       { label: "By Industry", href: "/capabilities/automation" },
       { label: "By Professional Practice", href: "/capabilities/analytics" },
       { label: "By Challenge", href: "/capabilities/integrations" },
@@ -93,9 +94,11 @@ export default function Navbar() {
       <div className="mx-auto max-w-[1440px] px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
+          <a href="/home">
           <span className="text-white font-semibold tracking-wide">
             BEAPOne UBOS
           </span>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-6 text-sm text-white/80">
