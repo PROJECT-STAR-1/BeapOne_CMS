@@ -33,8 +33,8 @@ const navItems = [
   {
     label: "Resources",
     children: [
-      { label: "Resources", href: "/solutions/enterprise" },
-      { label: "Knowledge Centre", href: "/solutions/enterprise" },
+      { label: "Resources", href: "/home/resources/resource" },
+      { label: "Knowledge Centre", href: "/home/resources/knowledge-library" },
       { label: "Blog", href: "/solutions/smes" },
       { label: "Newsroom", href: "/solutions/public" },
       { label: "Downloads Library", href: "/solutions/public" },

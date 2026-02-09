@@ -11,7 +11,7 @@ export default function HeroSection() {
           FAQs
         </h1>
         <p className="text-white text-sm font-medium flex items-center gap-2">
-          Product Overview <span className="opacity-40">/</span>{" "}
+         Resources <span className="opacity-40">/</span>{" "}
           <span className="font-bold">FAQs</span>
         </p>
       </div>
