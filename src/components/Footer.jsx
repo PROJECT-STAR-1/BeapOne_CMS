@@ -121,6 +121,10 @@ export default function Footer() {
                 label: "Request Demo",
                 href: "/home/resources/request-demo",
               },
+              {
+                label: "Request For Customization",
+                href: "/home/resources/request-customization",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[
