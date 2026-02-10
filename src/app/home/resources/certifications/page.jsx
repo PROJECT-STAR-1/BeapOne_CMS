@@ -5,7 +5,7 @@ import HeroSection from "@/components/resources/certifications/HeroSection";
 import VerificationInputSection from "@/components/resources/certifications/VerificationInputSection";
 import StructuredLearningPathsSection from "@/components/resources/certifications/StructuredLearningPathsSection";
 import CtaBannerSection from "@/components/resources/certifications/CtaBannerSection";
-import TestimonialsSection from "@/components/resources/certifications/TestimonialsSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
 
 export default function LearningCertificationRegistry() {
   return (

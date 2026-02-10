@@ -7,8 +7,7 @@ import { ArrowRight } from "lucide-react";
 export default function CtaBannerSection() {
   return (
     <section className="max-w-5xl mx-auto px-6 relative z-10 pt-12 pb-8">
-      {/* Reduced min-height from 350px to 280px to keep the card small */}
-      <div className="bg-[#50469C] rounded-[32px] relative flex flex-col md:flex-row items-center min-h-[280px] shadow-2xl overflow-visible">
+      <div className="bg-[#50469C] rounded-[32px] relative flex flex-col md:flex-row items-center min-h-[280 px] shadow-2xl overflow-visible">
         {/* Grid Pattern Overlay */}
         <div
           className="absolute inset-0 opacity-10 rounded-[32px] overflow-hidden"
