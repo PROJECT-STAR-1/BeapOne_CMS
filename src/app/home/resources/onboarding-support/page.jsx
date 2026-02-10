@@ -14,21 +14,11 @@ export default function OnboardingSupport() {
 
       <OnboardingJourneySection />
 
-      {/* UNIFIED GRADIENT BACKGROUND WRAPPER */}
-      <div className="relative w-full">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            background:
-              "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 5%, #E9E6FA 20%, #5C50B6 100%)",
-          }}></div>
+      <CtaBannerSection />
 
-        <CtaBannerSection />
+      <SelfServiceSupportHubSection />
 
-        <SelfServiceSupportHubSection />
-
-        <TestimonialsSection />
-      </div>
+      <TestimonialsSection />
     </div>
   );
 }

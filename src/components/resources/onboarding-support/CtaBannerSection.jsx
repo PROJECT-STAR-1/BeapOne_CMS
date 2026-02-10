@@ -6,8 +6,8 @@ import { MessageCircle, LifeBuoy } from "lucide-react";
 
 export default function CtaBannerSection() {
   return (
-    <section className="max-w-6xl mx-auto px-6 relative z-10 pt-16 pb-8">
-      <div className="bg-[#50469C] rounded-[32px] relative flex flex-col md:flex-row items-center min-h-[350px] shadow-2xl overflow-visible">
+    <section className="max-w-5xl mx-auto px-6 relative z-10 pt-24 pb-8">
+      <div className="bg-[#5C50B6] rounded-[32px] relative flex flex-col md:flex-row items-center min-h-[200px]">
         {/* Grid Pattern Overlay */}
         <div
           className="absolute inset-0 opacity-10 rounded-[32px] overflow-hidden"
