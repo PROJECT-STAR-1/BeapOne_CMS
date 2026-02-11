@@ -129,6 +129,10 @@ export default function Footer() {
                 label: "Request New Features",
                 href: "/home/resources/request-newfeatures",
               },
+              {
+                label: "Legal Documentation",
+                href: "/home/resources/legal-documentation",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[
