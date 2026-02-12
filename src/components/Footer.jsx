@@ -112,7 +112,7 @@ export default function Footer() {
                 label: "Learning Certification Registry",
                 href: "/home/resources/certifications",
               },
-              { label: "What’s New", href: "/whats-new" },
+              { label: "What’s New", href: "/home/resources/whats-new" },
             ]}
             extraTitle="Download"
             extraLinks={[
