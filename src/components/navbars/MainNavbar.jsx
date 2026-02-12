@@ -68,6 +68,7 @@ const navItems = [
       { label: "Reviews", href: "/case-studies" },
       { label: "Press", href: "/case-studies" },
       { label: "Brand Roadmap", href: "/case-studies" },
+      { label: "Contact Us", href: "/home/company/contact-us" },
     ],
   },
 ];

@@ -139,6 +139,7 @@ export default function Footer() {
               { label: "Reviews", href: "/reviews" },
               { label: "Press", href: "/press" },
               { label: "Brand Roadmap", href: "/roadmap" },
+              { label: "Contact Us", href: "/home/company/contact-us" },
             ]}
           />
         </div>
