@@ -113,6 +113,10 @@ export default function Footer() {
                 href: "/home/resources/certifications",
               },
               { label: "What’s New", href: "/home/resources/whats-new" },
+              {
+                label: "Onboarding Support",
+                href: "/home/resources/onboarding-support",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[

@@ -49,6 +49,10 @@ const navItems = [
         href: "/home/resources/certifications",
       },
       { label: "What’s New", href: "/home/resources/whats-new" },
+      {
+        label: "Onboarding Support",
+        href: "/home/resources/onboarding-support",
+      },
     ],
   },
   {
