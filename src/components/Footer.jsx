@@ -100,7 +100,7 @@ export default function Footer() {
                 href: "/resources/knowledge-centre",
               },
               { label: "Blog", href: "/blog" },
-              { label: "Newsroom", href: "/newsroom" },
+              { label: "Newsroom", href: "/home/resources/news-room" },
               { label: "Downloads Library", href: "/downloads" },
               { label: "Apps & Integrations", href: "/integrations" },
               {

@@ -36,7 +36,7 @@ const navItems = [
       { label: "Resources", href: "/home/resources/resource" },
       { label: "Knowledge Centre", href: "/home/resources/knowledge-library" },
       { label: "Blog", href: "/solutions/smes" },
-      { label: "Newsroom", href: "/solutions/public" },
+      { label: "Newsroom", href: "/home/resources/news-room" },
       { label: "Downloads Library", href: "/solutions/public" },
       { label: "Apps & Integrations", href: "/solutions/public" },
       {
