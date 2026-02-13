@@ -69,6 +69,10 @@ const navItems = [
         label: "Legal Documentation",
         href: "/home/resources/legal-documentation",
       },
+      {
+        label: "Support Center",
+        href: "/home/resources/support-center",
+      },
     ],
   },
   {
