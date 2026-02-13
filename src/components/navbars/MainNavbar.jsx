@@ -82,7 +82,7 @@ const navItems = [
         href: "/home/company/customer-affiliates",
       },
       { label: "Events", href: "/case-studies" },
-      { label: "Partners", href: "/case-studies" },
+      { label: "Partners", href: "/home/company/global-integrators" },
       { label: "Consultants", href: "/case-studies" },
       { label: "Reviews", href: "/case-studies" },
       { label: "Press", href: "/case-studies" },
