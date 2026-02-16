@@ -132,7 +132,7 @@ export default function SolutionsHubPage() {
         <div className="mx-auto max-w-7xl px-6 py-12">
           <h1 className="text-3xl font-semibold text-white">Solutions Hub</h1>
           <p className="text-sm text-indigo-200 mb-1">
-            Product Overview /<span className="font-medium text-blue-400"> Solutions Hub</span>
+            Solutions /<span className="font-medium text-blue-400"> Solutions Hub</span>
           </p>
           
         </div>

@@ -33,18 +33,26 @@ const navItems = [
   {
     label: "Resources",
     children: [
-      { label: "Knowledge Centre", href: "/solutions/enterprise" },
-      { label: "Blog", href: "/solutions/smes" },
+      { label: "Resources", href: "/home/resources/resource" },
+      { label: "Knowledge Centre", href: "/home/resources/knowledge-library" },
+      { label: "Blog", href: "/home/resources/blog" },
       { label: "Newsroom", href: "/solutions/public" },
       { label: "Downloads Library", href: "/solutions/public" },
-      { label: "Apps & Integrations", href: "/solutions/public" },
+      { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
       {
         label: "Community Training & Certifications",
         href: "/solutions/public",
       },
       { label: "FAQs", href: "/home/resources/faqs" },
-      { label: "Learning Certification Registry", href: "/solutions/public" },
-      { label: "What’s New", href: "/solutions/public" },
+      {
+        label: "Learning Certification Registry",
+        href: "/home/resources/certifications",
+      },
+      { label: "What’s New", href: "/home/resources/whats-new" },
+      {
+        label: "Onboarding Support",
+        href: "/home/resources/onboarding-support",
+      },
     ],
   },
   {
@@ -53,13 +61,17 @@ const navItems = [
       { label: "About Us", href: "/docs" },
       { label: "Career", href: "/blog" },
       { label: "Customers", href: "/case-studies" },
-      { label: "Affiliates", href: "/case-studies" },
+      {
+        label: "Customer Affiliates",
+        href: "/home/company/customer-affiliates",
+      },
       { label: "Events", href: "/case-studies" },
       { label: "Partners", href: "/case-studies" },
       { label: "Consultants", href: "/case-studies" },
       { label: "Reviews", href: "/case-studies" },
       { label: "Press", href: "/case-studies" },
       { label: "Brand Roadmap", href: "/case-studies" },
+      { label: "Contact Us", href: "/home/company/contact-us" },
     ],
   },
 ];

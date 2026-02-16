@@ -110,9 +110,13 @@ export default function Footer() {
               { label: "FAQs", href: "/home/resources/faqs" },
               {
                 label: "Learning Certification Registry",
-                href: "/certifications",
+                href: "/home/resources/certifications",
               },
-              { label: "What’s New", href: "/whats-new" },
+              { label: "What’s New", href: "/home/resources/whats-new" },
+              {
+                label: "Onboarding Support",
+                href: "/home/resources/onboarding-support",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[
@@ -128,13 +132,17 @@ export default function Footer() {
               { label: "About Us", href: "/about" },
               { label: "Career", href: "/careers" },
               { label: "Customers", href: "/customers" },
-              { label: "Affiliates", href: "/affiliates" },
+              {
+                label: "Customer Affiliates",
+                href: "/home/company/customer-affiliates",
+              },
               { label: "Events", href: "/events" },
               { label: "Partners", href: "/partners" },
               { label: "Consultants", href: "/consultants" },
               { label: "Reviews", href: "/reviews" },
               { label: "Press", href: "/press" },
               { label: "Brand Roadmap", href: "/roadmap" },
+              { label: "Contact Us", href: "/home/company/contact-us" },
             ]}
           />
         </div>
