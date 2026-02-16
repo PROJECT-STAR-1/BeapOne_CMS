@@ -132,7 +132,10 @@ export default function Footer() {
               { label: "About Us", href: "/about" },
               { label: "Career", href: "/careers" },
               { label: "Customers", href: "/customers" },
-              { label: "Affiliates", href: "/affiliates" },
+              {
+                label: "Customer Affiliates",
+                href: "/home/company/customer-affiliates",
+              },
               { label: "Events", href: "/events" },
               { label: "Partners", href: "/partners" },
               { label: "Consultants", href: "/consultants" },

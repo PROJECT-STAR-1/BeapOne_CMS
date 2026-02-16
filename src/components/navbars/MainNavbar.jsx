@@ -61,7 +61,10 @@ const navItems = [
       { label: "About Us", href: "/docs" },
       { label: "Career", href: "/blog" },
       { label: "Customers", href: "/case-studies" },
-      { label: "Affiliates", href: "/case-studies" },
+      {
+        label: "Customer Affiliates",
+        href: "/home/company/customer-affiliates",
+      },
       { label: "Events", href: "/case-studies" },
       { label: "Partners", href: "/case-studies" },
       { label: "Consultants", href: "/case-studies" },
