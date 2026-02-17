@@ -141,6 +141,10 @@ export default function Footer() {
                 label: "UBOS Expert",
                 href: "/home/resources/ubos-mastery",
               },
+              {
+                label: "Careers",
+                href: "/home/resources/careers",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[

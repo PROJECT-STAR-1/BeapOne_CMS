@@ -77,6 +77,10 @@ const navItems = [
         label: "UBOS Expert",
         href: "/home/resources/ubos-mastery",
       },
+      {
+        label: "Careers",
+        href: "/home/resources/careers",
+      },
     ],
   },
   {
