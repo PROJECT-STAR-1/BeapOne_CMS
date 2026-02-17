@@ -35,10 +35,15 @@ const navItems = [
     children: [
       { label: "Resources", href: "/home/resources/resource" },
       { label: "Knowledge Centre", href: "/home/resources/knowledge-library" },
+<<<<<<< HEAD
       { label: "Blog", href: "/solutions/smes" },
       { label: "Newsroom", href: "/home/resources/news-room" },
+=======
+      { label: "Blog", href: "/home/resources/blog" },
+      { label: "Newsroom", href: "/solutions/public" },
+>>>>>>> 4aa378576fd67935690ee6288a38c76c514bf573
       { label: "Downloads Library", href: "/solutions/public" },
-      { label: "Apps & Integrations", href: "/solutions/public" },
+      { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
       {
         label: "Community Training & Certifications",
         href: "/solutions/public",
