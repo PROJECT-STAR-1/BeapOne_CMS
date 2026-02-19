@@ -53,6 +53,10 @@ const navItems = [
         label: "Onboarding Support",
         href: "/home/resources/onboarding-support",
       },
+      {
+        label: "Request Demo",
+        href: "/home/resources/request-demo",
+      },
     ],
   },
   {

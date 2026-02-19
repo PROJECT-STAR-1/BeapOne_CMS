@@ -117,6 +117,10 @@ export default function Footer() {
                 label: "Onboarding Support",
                 href: "/home/resources/onboarding-support",
               },
+              {
+                label: "Request Demo",
+                href: "/home/resources/request-demo",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[
