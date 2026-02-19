@@ -40,8 +40,8 @@ const navItems = [
       { label: "Downloads Library", href: "/solutions/public" },
       { label: "Apps & Integrations", href: "/solutions/public" },
       {
-        label: "Community Training & Certifications",
-        href: "/solutions/public",
+        label: "Community Learning & Certifications",
+        href: "/home/resources/community-learning",
       },
       { label: "FAQs", href: "/home/resources/faqs" },
       {
