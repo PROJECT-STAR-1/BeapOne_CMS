@@ -62,6 +62,14 @@ const navItems = [
         label: "Request For Customization",
         href: "/home/resources/request-customization",
       },
+      {
+        label: "Request New Features",
+        href: "/home/resources/request-newfeatures",
+      },
+      {
+        label: "Legal Documentation",
+        href: "/home/resources/legal-documentation",
+      },
     ],
   },
   {
