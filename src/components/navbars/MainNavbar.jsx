@@ -26,7 +26,7 @@ const navItems = [
   {
     label: "Customer",
     children: [
-      { label: "Testimonials", href: "/modules/finance" },
+      { label: "Testimonials", href: "/home/customer/testimonials" },
       { label: "Case Studies", href: "/modules/hr" },
     ],
   },
@@ -37,7 +37,8 @@ const navItems = [
       { label: "Knowledge Centre", href: "/home/resources/knowledge-library" },
       { label: "Blog", href: "/home/resources/blog" },
       { label: "Newsroom", href: "/solutions/public" },
-      { label: "Downloads Library", href: "/solutions/public" },
+       { label: "Portal", href: "/home/resources/portal" },
+      { label: "Downloads Library", href: "/home/resources/downloadsLibrary" },
       { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
       {
         label: "Community Training & Certifications",
@@ -82,7 +83,7 @@ const navItems = [
         href: "/home/company/customer-affiliates",
       },
       { label: "Events", href: "/case-studies" },
-      { label: "Partners", href: "/case-studies" },
+      { label: "Partners", href: "/home/company/partners" },
       { label: "Consultants", href: "/case-studies" },
       { label: "Reviews", href: "/case-studies" },
       { label: "Press", href: "/case-studies" },
