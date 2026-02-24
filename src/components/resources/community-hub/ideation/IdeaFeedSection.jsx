@@ -24,7 +24,7 @@ export default function IdeaFeedSection({
   expandedIdeaId,
   handleToggleOpen,
   visibleCount,
-  handleAddComment, // Received from parent
+  handleAddComment,
 }) {
   // Local state to track the text input for new comments
   const [commentInput, setCommentInput] = useState("");
@@ -32,7 +32,7 @@ export default function IdeaFeedSection({
   const submitComment = (ideaId) => {
     if (commentInput.trim() === "") return;
     handleAddComment(ideaId, commentInput);
-    setCommentInput(""); // Clear the input field after sending
+    setCommentInput("");
   };
 
   return (
