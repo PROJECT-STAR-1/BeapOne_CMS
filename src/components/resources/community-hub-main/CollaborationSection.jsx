@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MessageSquare, Boxes, Lightbulb } from "lucide-react";
 
 const ROUTE_MAP = {
-  forums: "#",
+  forums: "/home/resources/community-hub/forum",
   resources: "#",
   ideation: "#",
 };
