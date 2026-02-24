@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function CtaFooterSection() {
+export default function CtaSection() {
   return (
     <section className="py-24 px-6 bg-[#1B1464] text-center">
       <div className="max-w-3xl mx-auto">
