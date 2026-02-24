@@ -145,7 +145,7 @@ export default function Footer() {
           <FooterColumn
             title="Company"
             links={[
-              { label: "About Us", href: "/about" },
+              { label: "About Us", href: "/home/company/about-us" },
               { label: "Career", href: "/careers" },
               { label: "Customers", href: "/customers" },
               {

@@ -75,7 +75,7 @@ const navItems = [
   {
     label: "Company",
     children: [
-      { label: "About Us", href: "/docs" },
+      { label: "About Us", href: "/home/company/about-us" },
       { label: "Career", href: "/blog" },
       { label: "Customers", href: "/case-studies" },
       {
