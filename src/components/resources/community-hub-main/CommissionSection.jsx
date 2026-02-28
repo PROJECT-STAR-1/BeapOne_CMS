@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 const ROUTE_MAP = {
   certifications: "#",
-  careers: "#",
+  careers: "/home/resources/community-hub/career",
 };
 
 const COMMISSION_CARDS = [
@@ -78,16 +78,19 @@ export default function CommissionSection() {
               <Link
                 key={card.id || idx}
                 href={resolvedPath}
-                className={`group bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full border border-gray-100 overflow-hidden ${card.borderColor}`}>
+                className={`group bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full border border-gray-100 overflow-hidden ${card.borderColor}`}
+              >
                 <h3
-                  className={`text-2xl font-bold mb-6 font-instrument-sans ${card.titleColor || card.themeColor}`}>
+                  className={`text-2xl font-bold mb-6 font-instrument-sans ${card.titleColor || card.themeColor}`}
+                >
                   {card.title}
                 </h3>
                 <div className="text-slate-600 text-[15px] leading-relaxed mb-10 flex-grow font-instrument-sans">
                   {card.desc}
                 </div>
                 <div
-                  className={`w-fit font-bold text-sm flex items-center justify-center gap-2 group-hover:opacity-70 transition-opacity font-instrument-sans ${card.themeColor}`}>
+                  className={`w-fit font-bold text-sm flex items-center justify-center gap-2 group-hover:opacity-70 transition-opacity font-instrument-sans ${card.themeColor}`}
+                >
                   {card.linkText} <ArrowRight size={16} />
                 </div>
               </Link>
