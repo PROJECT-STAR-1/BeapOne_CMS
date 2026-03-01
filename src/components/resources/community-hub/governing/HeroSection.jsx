@@ -25,7 +25,7 @@ export default function HeroSection() {
         {/* Hero Right: File Report Link */}
         <div className="flex-shrink-0">
           <a
-            href="#"
+            href="/home/resources/community-hub/governing-page-2"
             className="bg-[#181156] text-white text-xs font-bold uppercase tracking-widest px-7 py-3 rounded-full hover:bg-[#1B1464] transition-colors flex items-center justify-center gap-2 shadow-md"
           >
             <MessageSquareWarning size={16} strokeWidth={2} /> FILE REPORT
