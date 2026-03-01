@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const ROUTE_MAP = {
-  events: "#",
+  events: "/home/resources/community-hub/events",
   voting: "#",
   council: "/home/resources/community-hub/governing",
   accountability: "#",
