@@ -8,9 +8,11 @@ import {
   ArrowRight,
   CheckCircle2,
   Trophy,
+  Zap,
+  Users,
 } from "lucide-react";
 
-export default function HeroSection() {
+export default function HeroSection({ contributionType, setContributionType }) {
   return (
     <section className="w-full pt-12 pb-10 px-6 relative font-instrument-sans antialiased">
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
@@ -73,9 +75,9 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Hero Right: Register Card */}
+        {/* Hero Right: Register Card - Matching width lg:w-[600px] */}
         <div className="w-full lg:w-[600px] bg-white border border-gray-100 rounded-[2rem] p-8 md:p-10 shadow-xl relative overflow-hidden flex-shrink-0 mt-4 lg:mt-0">
-          {/* Background Watermark (G -- +) matching the Figma precisely */}
+          {/* Background Watermark (G -- +) */}
           <div className="absolute right-0 top-0 bottom-0 w-full pointer-events-none select-none overflow-hidden flex items-start justify-end z-0">
             <div className="relative right-[-10px] top-[10px] opacity-[0.03]">
               <div className="flex items-center text-[120px] font-black text-black leading-none tracking-tighter">
@@ -88,25 +90,78 @@ export default function HeroSection() {
           </div>
 
           <div className="relative z-10">
-            {/* Header with Title and the 3 Dashes */}
+            {/* Header with Title and the 3 Dashes (First one is active) */}
             <div className="flex items-start justify-between mb-8">
               <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
                 Register Your Profile
               </h3>
-              {/* The 3 Dashes (Two Blue, One Faded) */}
               <div className="flex items-center gap-1.5 mt-2.5">
                 <div className="w-6 h-1.5 bg-[#1B1464] rounded-full"></div>
-                <div className="w-6 h-1.5 bg-[#1B1464] rounded-full"></div>
+                <div className="w-6 h-1.5 bg-slate-200 rounded-full"></div>
                 <div className="w-6 h-1.5 bg-slate-200 rounded-full"></div>
               </div>
             </div>
 
-            {/* Initialize Profile Button */}
+            {/* Interactive Contribution Type Selectors */}
+            <div className="mb-6">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-3">
+                CONTRIBUTION TYPE
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Technical Liaison Box */}
+                <button
+                  onClick={() => setContributionType("technical")}
+                  className={`p-4 rounded-xl border flex flex-col gap-3 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1B1464] ${
+                    contributionType === "technical"
+                      ? "border-[#1B1464] bg-[#F0F4FF] text-[#1B1464] shadow-sm"
+                      : "border-gray-200 bg-white text-slate-900 hover:border-gray-300 hover:bg-slate-50"
+                  }`}
+                >
+                  <Zap
+                    size={20}
+                    strokeWidth={2.5}
+                    className={
+                      contributionType === "technical"
+                        ? "text-[#1B1464]"
+                        : "text-slate-600"
+                    }
+                  />
+                  <span className="text-sm font-bold tracking-tight">
+                    Technical Liaison
+                  </span>
+                </button>
+
+                {/* Community Lead Box */}
+                <button
+                  onClick={() => setContributionType("community")}
+                  className={`p-4 rounded-xl border flex flex-col gap-3 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1B1464] ${
+                    contributionType === "community"
+                      ? "border-[#1B1464] bg-[#F0F4FF] text-[#1B1464] shadow-sm"
+                      : "border-gray-200 bg-white text-slate-900 hover:border-gray-300 hover:bg-slate-50"
+                  }`}
+                >
+                  <Users
+                    size={20}
+                    strokeWidth={2.5}
+                    className={
+                      contributionType === "community"
+                        ? "text-[#1B1464]"
+                        : "text-slate-600"
+                    }
+                  />
+                  <span className="text-sm font-bold tracking-tight">
+                    Community Lead
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Continue Registration Button */}
             <a
-              href="/home/resources/community-hub/evolution-two"
+              href="#"
               className="w-full bg-black text-white text-[10px] font-bold uppercase tracking-widest py-4 px-6 rounded-xl hover:bg-gray-800 transition-all shadow-md flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black"
             >
-              INITIALIZE PROFILE <ArrowRight size={14} strokeWidth={2.5} />
+              CONTINUE REGISTRATION <ArrowRight size={14} strokeWidth={2.5} />
             </a>
 
             {/* Sync Link */}
