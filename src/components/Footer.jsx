@@ -153,7 +153,7 @@ export default function Footer() {
                 href: "/home/company/customer-affiliates",
               },
               { label: "Events", href: "/events" },
-              { label: "Partners", href: "/partners" },
+              { label: "Partners", href: "/home/company/global-integrators" },
               { label: "Consultants", href: "/consultants" },
               { label: "Reviews", href: "/reviews" },
               { label: "Press", href: "/press" },
