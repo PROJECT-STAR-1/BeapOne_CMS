@@ -11,7 +11,7 @@ const ROUTE_MAP = {
   accountability: "#",
   champions: "#",
   leaders: "/home/resources/community-hub/cluster",
-  committees: "#",
+  committees: "/home/resources/community-hub/committee",
 };
 
 const GOVERNANCE_CARDS = [
