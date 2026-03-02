@@ -26,7 +26,7 @@ const navItems = [
   {
     label: "Customer",
     children: [
-      { label: "Testimonials", href: "/modules/finance" },
+      { label: "Testimonials", href: "/home/customer/testimonials" },
       { label: "Case Studies", href: "/modules/hr" },
     ],
   },
@@ -35,14 +35,10 @@ const navItems = [
     children: [
       { label: "Resources", href: "/home/resources/resource" },
       { label: "Knowledge Centre", href: "/home/resources/knowledge-library" },
-<<<<<<< HEAD
-      { label: "Blog", href: "/solutions/smes" },
       { label: "Newsroom", href: "/home/resources/news-room" },
-=======
       { label: "Blog", href: "/home/resources/blog" },
-      { label: "Newsroom", href: "/solutions/public" },
->>>>>>> 4aa378576fd67935690ee6288a38c76c514bf573
-      { label: "Downloads Library", href: "/solutions/public" },
+      { label: "Portal", href: "/home/resources/portal" },
+      { label: "Downloads Library", href: "/home/resources/downloadsLibrary" },
       { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
       {
         label: "Community Training & Certifications",
@@ -87,7 +83,7 @@ const navItems = [
         href: "/home/company/customer-affiliates",
       },
       { label: "Events", href: "/case-studies" },
-      { label: "Partners", href: "/case-studies" },
+      { label: "Partners", href: "/home/company/partners" },
       { label: "Consultants", href: "/case-studies" },
       { label: "Reviews", href: "/case-studies" },
       { label: "Press", href: "/case-studies" },
@@ -122,7 +118,8 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 z-50 w-full bg-[#1B1464] border-b border-white/10">
+      className="sticky top-0 z-50 w-full bg-[#1B1464] border-b border-white/10"
+    >
       <div className="mx-auto max-w-[1440px] px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -142,7 +139,8 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => toggleDropdown(index)}
-                    className="flex items-center gap-1 hover:text-white transition">
+                    className="flex items-center gap-1 hover:text-white transition"
+                  >
                     {item.label}
                     {isOpen ? (
                       <ChevronUp size={14} />
@@ -159,7 +157,8 @@ export default function Navbar() {
                             <Link
                               href={child.href}
                               className="block px-4 py-2 hover:bg-gray-100 transition"
-                              onClick={() => setOpenIndex(null)}>
+                              onClick={() => setOpenIndex(null)}
+                            >
                               {child.label}
                             </Link>
                           </li>
@@ -185,13 +184,15 @@ export default function Navbar() {
 
             <Link
               href="#"
-              className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition">
+              className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition"
+            >
               Go to BEAPOne Lite
             </Link>
 
             <Link
               href="#"
-              className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition">
+              className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition"
+            >
               Contact Sales
             </Link>
           </div>
@@ -199,7 +200,8 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white">
+            className="lg:hidden text-white"
+          >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -214,7 +216,8 @@ export default function Navbar() {
                 <div key={item.label}>
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="w-full flex items-center justify-between text-left text-white/90 px-2 py-2">
+                    className="w-full flex items-center justify-between text-left text-white/90 px-2 py-2"
+                  >
                     {item.label}
                     {isOpen ? (
                       <ChevronUp size={16} />
@@ -233,7 +236,8 @@ export default function Navbar() {
                           onClick={() => {
                             setMobileOpen(false);
                             setOpenIndex(null);
-                          }}>
+                          }}
+                        >
                           {child.label}
                         </Link>
                       ))}
