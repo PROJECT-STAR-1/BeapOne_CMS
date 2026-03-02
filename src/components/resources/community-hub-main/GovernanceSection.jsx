@@ -9,7 +9,7 @@ const ROUTE_MAP = {
   voting: "#",
   council: "/home/resources/community-hub/governing",
   accountability: "#",
-  champions: "#",
+  champions: "/home/resources/community-hub/champions",
   leaders: "/home/resources/community-hub/cluster",
   committees: "/home/resources/community-hub/committee",
 };
