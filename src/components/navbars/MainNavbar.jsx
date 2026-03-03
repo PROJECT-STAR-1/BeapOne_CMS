@@ -44,6 +44,10 @@ const navItems = [
         label: "Community Learning & Certifications",
         href: "/home/resources/community-learning",
       },
+      {
+        label: "Global Community Hub",
+        href: "/home/resources/community-hub-main",
+      },
       { label: "FAQs", href: "/home/resources/faqs" },
       {
         label: "Learning Certification Registry",
