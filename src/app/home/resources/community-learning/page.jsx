@@ -4,9 +4,13 @@ import React from "react";
 import HeroSection from "@/components/resources/community-learning/HeroSection";
 import LearningArchitectureSection from "@/components/resources/community-learning/LearningArchitectureSection";
 import DeliveryModelsSection from "@/components/resources/community-learning/DeliveryModelsSection";
-import CertificationPathwaysSection from "@/components//resources/community-learning/CertificationPathwaysSection";
+import CertificationPathwaysSection from "@/components/resources/community-learning/CertificationPathwaysSection";
 import TierMatrixSection from "@/components/resources/community-learning/TierMatrixSection";
-import CtaFooterSection from "@/components/resources/community-learning/CtaFooterSection";
+import IntegratedFormatsSection from "@/components/resources/community-learning/IntegratedFormatsSection";
+import EngagementTrendsSection from "@/components/resources/community-learning/EngagementTrendsSection";
+import CommunityImpactSection from "@/components/resources/community-learning/CommunityImpactSection";
+import RoadmapSection from "@/components/resources/community-learning/RoadmapSection";
+import NextStepsSection from "@/components/resources/community-learning/NextStepsSection";
 
 export default function CommunityCertificationPage() {
   return (
@@ -16,7 +20,11 @@ export default function CommunityCertificationPage() {
       <DeliveryModelsSection />
       <CertificationPathwaysSection />
       <TierMatrixSection />
-      <CtaFooterSection />
+      <IntegratedFormatsSection />
+      <EngagementTrendsSection />
+      <CommunityImpactSection />
+      <RoadmapSection />
+      <NextStepsSection />
     </div>
   );
 }
