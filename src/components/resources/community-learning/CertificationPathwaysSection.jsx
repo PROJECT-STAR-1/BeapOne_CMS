@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Check } from "lucide-react";
 
 const PATHWAY_CHECKLIST = [
@@ -11,22 +12,21 @@ const PATHWAY_CHECKLIST = [
 
 export default function CertificationPathwaysSection() {
   return (
-    <section className="py-24 px-6 bg-[#F4F5F7]">
+    <section className="py-24 px-6 bg-[#F4F5F7] font-instrument-sans">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-center gap-3 mb-16">
           <div className="w-1.5 h-8 bg-[#1B1464]"></div>
-          <h2 className="text-3xl font-bold text-black tracking-tight font-instrument-sans">
+          <h2 className="text-3xl font-bold text-black tracking-tight">
             Certification Pathways
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Text Content */}
           <div>
-            <h3 className="text-2xl font-bold text-black mb-6 font-instrument-sans">
+            <h3 className="text-2xl font-bold text-black mb-6">
               Standardized Mastery
             </h3>
-            <p className="text-slate-600 text-base leading-relaxed mb-8 font-instrument-sans max-w-lg">
+            <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-lg">
               The C23 Module mandates that all high-risk operations be managed
               by certified professionals. Our paths provide the necessary
               scaffolding for:
@@ -39,21 +39,18 @@ export default function CertificationPathwaysSection() {
                     size={20}
                     strokeWidth={3}
                   />
-                  <span className="text-slate-700 font-medium font-instrument-sans">
-                    {item}
-                  </span>
+                  <span className="text-slate-700 font-medium">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Image Content */}
-          <div className="w-full h-[400px] bg-slate-200 rounded-lg overflow-hidden shadow-md relative">
-            {/* Note: Replace src with actual image path from your project assets */}
-            <img
+          <div className="w-full h-[400px] md:h-[400px] bg-slate-200 rounded-lg overflow-hidden shadow-md relative">
+            <Image
               src="/images/CelebratingExpert.svg"
-              alt="Certified Professional Celebrating"
-              className="w-full h-full object-cover"
+              alt="Certified Professional"
+              fill
+              className="object-cover"
             />
           </div>
         </div>
