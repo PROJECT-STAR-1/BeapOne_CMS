@@ -5,13 +5,13 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const ROUTE_MAP = {
-  events: "#",
+  events: "/home/resources/community-hub/events",
   voting: "#",
   council: "/home/resources/community-hub/governing",
   accountability: "#",
-  champions: "#",
-  leaders: "#",
-  committees: "#",
+  champions: "/home/resources/community-hub/champions",
+  leaders: "/home/resources/community-hub/cluster",
+  committees: "/home/resources/community-hub/committee",
 };
 
 const GOVERNANCE_CARDS = [
