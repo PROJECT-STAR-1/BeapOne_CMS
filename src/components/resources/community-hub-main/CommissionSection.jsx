@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const ROUTE_MAP = {
-  certifications: "#",
+  certifications: "/home/resources/community-hub/learn",
   careers: "/home/resources/community-hub/career",
 };
 

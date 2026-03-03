@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const ROUTE_MAP = {
   events: "#",
   voting: "#",
-  council: "#",
+  council: "/home/resources/community-hub/governing",
   accountability: "#",
   champions: "#",
   leaders: "#",
@@ -114,9 +114,11 @@ export default function GovernanceSection() {
                 <Link
                   key={card.id || idx}
                   href={resolvedPath}
-                  className={`group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full border border-gray-100 overflow-hidden ${card.borderColor}`}>
+                  className={`group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full border border-gray-100 overflow-hidden ${card.borderColor}`}
+                >
                   <h3
-                    className={`text-lg font-bold mb-3 font-instrument-sans ${card.themeColor}`}>
+                    className={`text-lg font-bold mb-3 font-instrument-sans ${card.themeColor}`}
+                  >
                     {card.title}
                   </h3>
                   <p className="text-slate-600 text-[15px] leading-relaxed flex-grow font-instrument-sans mb-6">
@@ -124,7 +126,8 @@ export default function GovernanceSection() {
                   </p>
                   {card.linkText && (
                     <div
-                      className={`w-fit font-bold text-sm flex items-center gap-2 group-hover:opacity-70 transition-opacity font-instrument-sans mt-auto ${card.themeColor}`}>
+                      className={`w-fit font-bold text-sm flex items-center gap-2 group-hover:opacity-70 transition-opacity font-instrument-sans mt-auto ${card.themeColor}`}
+                    >
                       {card.linkText} <ArrowRight size={16} />
                     </div>
                   )}
@@ -145,9 +148,11 @@ export default function GovernanceSection() {
                 <Link
                   key={card.id || idx}
                   href={resolvedPath}
-                  className={`group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full border border-gray-100 overflow-hidden ${card.borderColor}`}>
+                  className={`group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full border border-gray-100 overflow-hidden ${card.borderColor}`}
+                >
                   <h3
-                    className={`text-lg font-bold mb-3 font-instrument-sans ${card.themeColor}`}>
+                    className={`text-lg font-bold mb-3 font-instrument-sans ${card.themeColor}`}
+                  >
                     {card.title}
                   </h3>
                   <p className="text-slate-600 text-[15px] leading-relaxed flex-grow font-instrument-sans">
