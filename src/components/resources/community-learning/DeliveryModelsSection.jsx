@@ -29,11 +29,11 @@ const DELIVERY_MODELS = [
 
 export default function DeliveryModelsSection() {
   return (
-    <section className="py-24 px-6 bg-[#F9FAFB]">
+    <section className="py-24 px-6 bg-[#F9FAFB] font-instrument-sans">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-center gap-3 mb-12">
           <div className="w-1.5 h-8 bg-[#1B1464]"></div>
-          <h2 className="text-3xl font-bold text-black tracking-tight font-instrument-sans">
+          <h2 className="text-3xl font-bold text-black tracking-tight">
             Multi-Modal Delivery Models
           </h2>
         </div>
@@ -42,15 +42,15 @@ export default function DeliveryModelsSection() {
           {DELIVERY_MODELS.map((model, idx) => (
             <div
               key={idx}
-              className={`bg-white rounded-2xl p-10 shadow-sm hover:shadow-md transition-shadow border border-gray-100 border-t-[6px] flex flex-col h-full ${model.borderColor}`}>
+              className={`bg-white rounded-2xl p-10 shadow-sm hover:shadow-md transition-shadow border border-gray-100 border-t-[6px] flex flex-col h-full ${model.borderColor}`}
+            >
               <div className={`mb-6 ${model.themeColor}`}>
                 <model.icon size={36} strokeWidth={1.5} />
               </div>
-              <h3
-                className={`text-xl font-bold mb-4 font-instrument-sans ${model.themeColor}`}>
+              <h3 className={`text-xl font-bold mb-4 ${model.themeColor}`}>
                 {model.title}
               </h3>
-              <p className="text-slate-600 text-sm leading-relaxed flex-grow font-instrument-sans">
+              <p className="text-slate-600 text-sm leading-relaxed flex-grow">
                 {model.desc}
               </p>
             </div>
