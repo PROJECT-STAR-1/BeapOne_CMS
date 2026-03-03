@@ -6,7 +6,7 @@ import { MessageSquare, Boxes, Lightbulb } from "lucide-react";
 
 const ROUTE_MAP = {
   forums: "/home/resources/community-hub/forum",
-  resources: "#",
+  resources: "/home/resources/community-hub/resource",
   ideation: "/home/resources/community-hub/ideation",
 };
 
