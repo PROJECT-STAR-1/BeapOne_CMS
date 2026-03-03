@@ -104,8 +104,8 @@ export default function Footer() {
               { label: "Downloads Library", href: "/downloads" },
               { label: "Apps & Integrations", href: "/integrations" },
               {
-                label: "Community Training & Certifications",
-                href: "/training",
+                label: "Community Learning & Certifications",
+                href: "/home/resources/community-learning",
               },
               { label: "FAQs", href: "/home/resources/faqs" },
               {

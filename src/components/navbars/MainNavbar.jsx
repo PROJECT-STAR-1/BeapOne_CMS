@@ -41,8 +41,8 @@ const navItems = [
       { label: "Downloads Library", href: "/home/resources/downloadsLibrary" },
       { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
       {
-        label: "Community Training & Certifications",
-        href: "/solutions/public",
+        label: "Community Learning & Certifications",
+        href: "/home/resources/community-learning",
       },
       { label: "FAQs", href: "/home/resources/faqs" },
       {
