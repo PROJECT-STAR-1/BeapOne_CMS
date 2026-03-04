@@ -2,54 +2,7 @@
 
 import React, { useState } from "react";
 
-// Data derived from WN3.jpg
-const RELEASE_DATA = [
-  {
-    id: "batch4",
-    plannedText: "Planned: Q4 2026 - Batch 4 Release (Hub S)",
-    title: "S4: Manufacturing-as-a-Service Model is Coming Soon!",
-    description:
-      "**Key Highlights:** This final major batch focuses on rapid deployment capability by releasing all specialized Business Templates (Hub S), enabling quick setup for niche market operations like MaaS, WaaS, and BNPL.",
-    hasImage: true,
-    themeColor: "text-[#D32F2F]", // Red text
-    btnColor: "bg-[#D32F2F]", // Red button
-    btnHover: "hover:bg-[#b71c1c]",
-    tableData: [
-      {
-        module: "S1: Build To Rent (BTR)",
-        version: "1.0.0",
-        status: "Upcoming",
-        jurisdiction: "Global/NA",
-      },
-      {
-        module: "S4: Manufacturing as a Service (MaaS)",
-        version: "1.0.0",
-        status: "Upcoming",
-        jurisdiction: "Global",
-      },
-      {
-        module: "S6: Buy Now Pay Later (BNPL)",
-        version: "1.0.0",
-        status: "Upcoming",
-        jurisdiction: "Global/Financial",
-      },
-    ],
-  },
-  {
-    id: "batch3",
-    plannedText: "Planned: Q3 2026 - Batch 3 Release (Hub Q)",
-    title: "Advance Program Management with Hub Q",
-    description:
-      "**Key Highlights:** Batch 3 focuses on rolling out the advanced **Syndicated Program Management (Hub Q)**, designed for community-based and decentralized production/service programs (Farm2school, Bulk Sourcing, Syndicated Housing, etc.).",
-    hasImage: false,
-    themeColor: "text-[#0056D2]", // Blue text
-    btnColor: "bg-[#0056D2]", // Blue button
-    btnHover: "hover:bg-[#0044a5]",
-    tableData: [], // Data not fully visible in image
-  },
-];
-
-export default function ReleaseNotesSection() {
+export default function ReleaseNotesSection({ notes = [] }) {
   const [expandedModules, setExpandedModules] = useState({ batch4: true });
 
   const toggleModule = (id) => {
@@ -59,13 +12,43 @@ export default function ReleaseNotesSection() {
     }));
   };
 
+  // Safe parser for bold text formatting without dangerouslySetInnerHTML
+  const renderFormattedDescription = (text) => {
+    if (!text) return null;
+    const parts = text.split(/\*\*(.*?)\*\*/g);
+
+    return parts.map((part, index) =>
+      index % 2 === 1 ? (
+        <strong key={index} className="font-bold text-gray-800">
+          {part}
+        </strong>
+      ) : (
+        <span key={index}>{part}</span>
+      ),
+    );
+  };
+
+  if (notes.length === 0) {
+    return (
+      <section className="max-w-7xl mx-auto px-6 py-24 bg-white text-center">
+        <h3 className="text-xl font-bold text-slate-800 mb-2">
+          No releases found
+        </h3>
+        <p className="text-slate-500">
+          Try adjusting your filters or search terms.
+        </p>
+      </section>
+    );
+  }
+
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16 bg-white">
+    <section className="max-w-7xl mx-auto px-6 pt-6 pb-16 bg-white">
       <div className="space-y-12">
-        {RELEASE_DATA.map((release) => (
+        {notes.map((release) => (
           <div
             key={release.id}
-            className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden"
+          >
             {/* Header Strip */}
             <div className="bg-[#F5F5F5] px-8 py-4 border-b border-gray-200">
               <span className={`font-bold text-xs ${release.themeColor}`}>
@@ -77,42 +60,37 @@ export default function ReleaseNotesSection() {
             </div>
 
             <div className="p-8">
-              {/* Image Placeholder (Grey Box) */}
+              {/* Image Placeholder */}
               {release.hasImage && (
                 <div className="w-full h-48 bg-[#F0F0F0] rounded-lg mb-6"></div>
               )}
 
-              {/* Description */}
-              <p
-                className="text-gray-600 text-sm leading-relaxed mb-8"
-                dangerouslySetInnerHTML={{
-                  __html: release.description.replace(
-                    /\*\*(.*?)\*\*/g,
-                    '<span class="font-bold text-gray-800">$1</span>',
-                  ),
-                }}
-              />
+              {/* Formatted Description */}
+              <p className="text-gray-600 text-sm leading-relaxed mb-8">
+                {renderFormattedDescription(release.description)}
+              </p>
 
-              {/* Divider */}
               <div className="border-t border-gray-100 my-6"></div>
 
-              {/* Accordion Toggle */}
+              {/* Accordion Controls */}
               <div className="flex items-center justify-between mb-6">
                 <button
                   onClick={() => toggleModule(release.id)}
-                  className={`font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity ${release.themeColor}`}>
+                  className={`font-bold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity ${release.themeColor}`}
+                >
                   {expandedModules[release.id]
                     ? "Hide Module Details"
                     : "View Module Details"}
                 </button>
 
                 <button
-                  className={`px-6 py-2.5 rounded-full text-white text-xs font-semibold flex items-center gap-2 transition-colors ${release.btnColor} ${release.btnHover}`}>
+                  className={`px-6 py-2.5 rounded-full text-white text-xs font-semibold flex items-center gap-2 transition-colors ${release.btnColor} ${release.btnHover}`}
+                >
                   Read Full Release Notes
                 </button>
               </div>
 
-              {/* Table Content */}
+              {/* Data Table */}
               {expandedModules[release.id] && release.tableData.length > 0 && (
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
@@ -136,7 +114,8 @@ export default function ReleaseNotesSection() {
                       {release.tableData.map((row, idx) => (
                         <tr
                           key={idx}
-                          className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors">
+                          className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors"
+                        >
                           <td className="py-4 text-sm text-gray-600 font-medium">
                             {row.module}
                           </td>
@@ -144,7 +123,14 @@ export default function ReleaseNotesSection() {
                             {row.version}
                           </td>
                           <td className="py-4">
-                            <span className="bg-[#FFF9C4] text-[#FBC02D] px-4 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide">
+                            <span
+                              className={`px-4 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide
+                                ${row.status === "Active" ? "bg-[#E6F4EA] text-[#1E8E3E]" : ""}
+                                ${row.status === "Upcoming" ? "bg-[#FCE8E6] text-[#C5221F]" : ""}
+                                ${row.status === "Legacy" ? "bg-[#E0E0E0] text-[#616161]" : ""}
+                                ${!["Active", "Upcoming", "Legacy"].includes(row.status) ? "bg-[#FFF9C4] text-[#FBC02D]" : ""}
+                              `}
+                            >
                               {row.status}
                             </span>
                           </td>
