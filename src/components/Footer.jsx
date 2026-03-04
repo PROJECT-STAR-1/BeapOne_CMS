@@ -100,12 +100,16 @@ export default function Footer() {
                 href: "/resources/knowledge-centre",
               },
               { label: "Blog", href: "/blog" },
-              { label: "Newsroom", href: "/newsroom" },
+              { label: "Newsroom", href: "/home/resources/news-room" },
               { label: "Downloads Library", href: "/downloads" },
               { label: "Apps & Integrations", href: "/integrations" },
               {
-                label: "Community Training & Certifications",
-                href: "/training",
+                label: "Community Learning & Certifications",
+                href: "/home/resources/community-learning",
+              },
+              {
+                label: "Global Community Hub",
+                href: "/home/resources/community-hub-main",
               },
               { label: "FAQs", href: "/home/resources/faqs" },
               {
@@ -121,6 +125,30 @@ export default function Footer() {
                 label: "Request Demo",
                 href: "/home/resources/request-demo",
               },
+              {
+                label: "Request For Customization",
+                href: "/home/resources/request-customization",
+              },
+              {
+                label: "Request New Features",
+                href: "/home/resources/request-newfeatures",
+              },
+              {
+                label: "Legal Documentation",
+                href: "/home/resources/legal-documentation",
+              },
+              {
+                label: "Support Center",
+                href: "/home/resources/support-center",
+              },
+              {
+                label: "UBOS Expert",
+                href: "/home/resources/ubos-mastery",
+              },
+              {
+                label: "Careers",
+                href: "/home/resources/careers",
+              },
             ]}
             extraTitle="Download"
             extraLinks={[
@@ -133,7 +161,7 @@ export default function Footer() {
           <FooterColumn
             title="Company"
             links={[
-              { label: "About Us", href: "/about" },
+              { label: "About Us", href: "/home/company/about-us" },
               { label: "Career", href: "/careers" },
               { label: "Customers", href: "/customers" },
               {
@@ -141,7 +169,7 @@ export default function Footer() {
                 href: "/home/company/customer-affiliates",
               },
               { label: "Events", href: "/events" },
-              { label: "Partners", href: "/partners" },
+              { label: "Partners", href: "/home/company/global-integrators" },
               { label: "Consultants", href: "/consultants" },
               { label: "Reviews", href: "/reviews" },
               { label: "Press", href: "/press" },
