@@ -139,7 +139,7 @@ export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700">
+      <div className="bg-[#1B1464]">
         <div className="mx-auto max-w-7xl px-6 py-14">
           <h1 className="mt-2 text-4xl font-bold text-white">Resources</h1>
            <p className="text-sm text-slate-300">Resources/ <span className="font-medium text-blue-400">Resources</span></p>

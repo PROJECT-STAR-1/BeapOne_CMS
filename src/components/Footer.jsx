@@ -43,19 +43,19 @@ export default function Footer() {
                 Connect With Us
               </p>
               <div className="flex gap-3">
-                <a href="#" aria-label="X">
+                <a href="" aria-label="X">
                   <X size={18} />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a href="" aria-label="Instagram">
                   <Instagram size={18} />
                 </a>
-                <a href="#" aria-label="YouTube">
+                <a href="" aria-label="YouTube">
                   <Youtube size={18} />
                 </a>
-                <a href="#" aria-label="LinkedIn">
+                <a href="" aria-label="LinkedIn">
                   <Linkedin size={18} />
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a href="" aria-label="Facebook">
                   <Facebook size={18} />
                 </a>
               </div>
@@ -65,15 +65,16 @@ export default function Footer() {
           <FooterColumn
             title="Product"
             links={[
-              { label: "Capabilities", href: "/product/capabilities" },
-              { label: "Features", href: "/product/features" },
-              { label: "Modules", href: "/product/modules" },
+              { label: "Capabilities", href: "/home/product/capabilities" },
+              { label: "Features", href: "/home/product/features" },
+              { label: "Modules", href: "/home/product/modules" },
             ]}
           />
 
           <FooterColumn
             title="Solutions"
             links={[
+                { label: "Solutions Hub", href: "/home/solutions/solutionsHub" },
               { label: "By Industry", href: "/solutions/industry" },
               {
                 label: "By Professional Practice",
@@ -87,7 +88,7 @@ export default function Footer() {
           <FooterColumn
             title="Customer"
             links={[
-              { label: "Testimonials", href: "/testimonials" },
+              { label: "Testimonials", href: "/home/customer/testimonials" },
               { label: "Case Studies", href: "/case-studies" },
             ]}
           />
@@ -99,10 +100,10 @@ export default function Footer() {
                 label: "Knowledge Centre",
                 href: "/resources/knowledge-centre",
               },
-              { label: "Blog", href: "/blog" },
+              { label: "Blog", href: "/home/resources/blog" },
               { label: "Newsroom", href: "/home/resources/news-room" },
-              { label: "Downloads Library", href: "/downloads" },
-              { label: "Apps & Integrations", href: "/integrations" },
+              { label: "Downloads Library", href: "/home/resources/downloadsLibrary" },
+              { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
               {
                 label: "Community Learning & Certifications",
                 href: "/home/resources/community-learning",
@@ -145,10 +146,7 @@ export default function Footer() {
                 label: "UBOS Expert",
                 href: "/home/resources/ubos-mastery",
               },
-              {
-                label: "Careers",
-                href: "/home/resources/careers",
-              },
+              
             ]}
             extraTitle="Download"
             extraLinks={[
@@ -162,7 +160,10 @@ export default function Footer() {
             title="Company"
             links={[
               { label: "About Us", href: "/home/company/about-us" },
-              { label: "Career", href: "/careers" },
+             {
+                label: "Careers",
+                href: "/home/resources/careers",
+              },
               { label: "Customers", href: "/customers" },
               {
                 label: "Customer Affiliates",

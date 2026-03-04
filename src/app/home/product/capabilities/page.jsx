@@ -111,7 +111,7 @@ export default function CapabilitiesPage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-blue-900 text-white">
+      <section className="bg-[#1B1464] text-white">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <h1 className="text-3xl sm:text-4xl font-semibold mb-4">
             Capabilities

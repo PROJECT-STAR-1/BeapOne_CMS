@@ -82,18 +82,17 @@ const navItems = [
         label: "UBOS Expert",
         href: "/home/resources/ubos-mastery",
       },
-      {
-        label: "Careers",
-        href: "/home/resources/careers",
-      },
+      
     ],
   },
   {
     label: "Company",
     children: [
       { label: "About Us", href: "/home/company/about-us" },
-      { label: "Career", href: "/blog" },
-      { label: "Customers", href: "/case-studies" },
+     {
+        label: "Careers",
+        href: "/home/resources/careers",
+      },
       {
         label: "Customer Affiliates",
         href: "/home/company/customer-affiliates",
@@ -168,7 +167,7 @@ export default function Navbar() {
                   </button>
 
                   {isOpen && (
-                    <div className="absolute left-0 top-full mt-2 w-56 rounded-md bg-indigo-200 shadow-lg z-50">
+                    <div className="absolute left-0 top-full mt-2 w-56 rounded-md bg-indigo-200 shadow-lg z-50 max-h-[70vh] overflow-y-auto">
                       <ul className="py-2 text-sm text-gray-700">
                         {item.children.map((child) => (
                           <li key={child.label}>
@@ -245,7 +244,7 @@ export default function Navbar() {
                   </button>
 
                   {isOpen && (
-                    <div className="pl-4">
+                    <div className="pl-4 max-h-[50vh] overflow-y-auto">
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
