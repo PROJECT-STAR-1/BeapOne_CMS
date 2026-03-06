@@ -200,14 +200,14 @@ export default function Navbar() {
             </button>
 
             <Link
-              href="#"
+              href="/home/comingSoon"
               className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition"
             >
               Go to BEAPOne Lite
             </Link>
 
             <Link
-              href="#"
+              href="/home/company/contact-us"
               className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition"
             >
               Contact Sales

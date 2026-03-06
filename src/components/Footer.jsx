@@ -182,7 +182,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-xs text-gray-400 pb-6">
-        © 2026, BEAPONE Unified Operating System. All Rights Reserved.
+        © {new Date().getFullYear()}, BEAPONE Unified Operating System. All Rights Reserved.
       </div>
     </footer>
   );
