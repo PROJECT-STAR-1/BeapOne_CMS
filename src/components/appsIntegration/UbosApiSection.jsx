@@ -58,7 +58,7 @@ export default function UBOSApiSection() {
         </div>
 
         {/* RIGHT SIDE — CODE BLOCK */}
-        <div className="bg-gray-400 rounded-xl p-6 shadow-lg border border-gray-800">
+        <div className="bg-black rounded-xl p-6 shadow-lg border border-gray-800">
           <pre className="text-sm overflow-x-auto">
             <code className="text-green-400">
               {`// Sample UBOS API request

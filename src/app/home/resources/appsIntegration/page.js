@@ -114,7 +114,7 @@ export default function MarketplacePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* HERO */}
-    <section className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-800 text-white py-16">
+    <section className="bg-[#1B1464] text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl font-bold">Apps & Integrations Marketplace</h1>
           <p className="mt-2 text-sm text-gray-300">

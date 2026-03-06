@@ -63,7 +63,7 @@ export default function KnowledgeLibraryPage() {
   return (
     <div className="w-full">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700 px-8 py-16">
+      <div className="bg-[#1B1464] px-8 py-16">
         <h1 className="text-3xl font-bold text-white">Knowledge Library</h1>
         <p className="mt-2 text-sm text-blue-200">
           Resources /<span className="font-medium text-blue-400"> Knowledge Library</span>

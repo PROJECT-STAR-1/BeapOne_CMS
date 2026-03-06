@@ -77,7 +77,7 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* HERO */}
-      <div className="bg-indigo-900 py-20 text-center text-white">
+      <div className="bg-[#1B1464] py-20 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-bold">
           Explore Our Customer Testimonials & Case Studies
         </h1>

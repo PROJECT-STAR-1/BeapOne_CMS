@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { ArrowRight, Mail } from "lucide-react"
+import Link from "next/link";
 
 const solutions = [
   {
@@ -77,10 +78,12 @@ export default function AccountingSolutionsSection() {
                 {item.description}
               </p>
 
-              <div className="flex items-center gap-2 text-sm font-medium text-blue-600">
+              <Link 
+              href="/home"
+              className="flex items-center gap-2 text-sm font-medium text-blue-600">
                 Learn more
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </div>
+              </Link>
             </div>
           ))}
         </div>

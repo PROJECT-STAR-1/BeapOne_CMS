@@ -88,7 +88,7 @@ export default function FeaturesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700">
+      <div className="bg-[#1B1464]">
         <div className="mx-auto max-w-7xl px-6 py-14 text-white">
            <h1 className="mt-2 text-4xl font-semibold">All Features</h1>
           <p className="text-sm opacity-80">Product Overview /<span className="font-medium text-blue-400"> Features</span></p>

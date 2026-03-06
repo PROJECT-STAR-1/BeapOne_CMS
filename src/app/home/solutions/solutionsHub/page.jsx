@@ -128,7 +128,7 @@ export default function SolutionsHubPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* ---------- HERO ---------- */}
-      <header className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700">
+      <header className="bg-[#1B1464]">
         <div className="mx-auto max-w-7xl px-6 py-12">
           <h1 className="text-3xl font-semibold text-white">Solutions Hub</h1>
           <p className="text-sm text-indigo-200 mb-1">

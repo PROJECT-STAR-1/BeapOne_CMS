@@ -116,7 +116,7 @@ const matchesType =
   return (
     <div className="min-h-screen bg-gray-100">
       {/* HEADER */}
-      <div className="bg-indigo-900 text-white py-16 px-6 text-center">
+      <div className="bg-[#1B1464] text-white py-16 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Official UBOS Downloads & Resource Library
         </h1>

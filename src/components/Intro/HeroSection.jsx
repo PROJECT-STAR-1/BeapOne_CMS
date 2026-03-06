@@ -34,7 +34,7 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="#"
+            href="/home/resources/request-demo"
             className="rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
           >
             Schedule a demo

@@ -43,19 +43,19 @@ export default function Footer() {
                 Connect With Us
               </p>
               <div className="flex gap-3">
-                <a href="#" aria-label="X">
+                <a href="/home/comingSoon" aria-label="X">
                   <X size={18} />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a href="/home/comingSoon" aria-label="Instagram">
                   <Instagram size={18} />
                 </a>
-                <a href="#" aria-label="YouTube">
+                <a href="/home/comingSoon" aria-label="YouTube">
                   <Youtube size={18} />
                 </a>
-                <a href="#" aria-label="LinkedIn">
+                <a href="/home/comingSoon" aria-label="LinkedIn">
                   <Linkedin size={18} />
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a href="/home/comingSoon" aria-label="Facebook">
                   <Facebook size={18} />
                 </a>
               </div>
@@ -65,30 +65,30 @@ export default function Footer() {
           <FooterColumn
             title="Product"
             links={[
-              { label: "Capabilities", href: "/product/capabilities" },
-              { label: "Features", href: "/product/features" },
-              { label: "Modules", href: "/product/modules" },
+              { label: "Capabilities", href: "/home/product/capabilities" },
+              { label: "Features", href: "/home/product/features" },
+              { label: "Modules", href: "/home/product/coreModules" },
             ]}
           />
 
           <FooterColumn
             title="Solutions"
             links={[
-              { label: "By Industry", href: "/solutions/industry" },
+              { label: "By Industry", href: "/home/solutions/solutionsHub" },
               {
                 label: "By Professional Practice",
-                href: "/solutions/practice",
+                href: "/home/solutions/solutionsHub",
               },
-              { label: "By Challenge", href: "/solutions/challenges" },
-              { label: "By Expertise", href: "/solutions/expertise" },
+              { label: "By Challenge", href: "/home/solutions/solutionsHub" },
+              { label: "By Expertise", href: "/home/solutions/solutionsHub" },
             ]}
           />
 
           <FooterColumn
             title="Customer"
             links={[
-              { label: "Testimonials", href: "/testimonials" },
-              { label: "Case Studies", href: "/case-studies" },
+              { label: "Testimonials", href: "/home/customer/testimonials" },
+              { label: "Case Studies", href: "/home/customer/testimonials" },
             ]}
           />
 
@@ -97,12 +97,12 @@ export default function Footer() {
             links={[
               {
                 label: "Knowledge Centre",
-                href: "/resources/knowledge-centre",
+                href: "/home/resources/knowledge-library",
               },
-              { label: "Blog", href: "/blog" },
+              { label: "Blog", href: "/home/resources/blog" },
               { label: "Newsroom", href: "/home/resources/news-room" },
-              { label: "Downloads Library", href: "/downloads" },
-              { label: "Apps & Integrations", href: "/integrations" },
+              { label: "Downloads Library", href: "/home/resources/downloadsLibrary" },
+              { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
               {
                 label: "Community Learning & Certifications",
                 href: "/home/resources/community-learning",
@@ -145,16 +145,13 @@ export default function Footer() {
                 label: "UBOS Expert",
                 href: "/home/resources/ubos-mastery",
               },
-              {
-                label: "Careers",
-                href: "/home/resources/careers",
-              },
+              
             ]}
             extraTitle="Download"
             extraLinks={[
-              { label: "iOS", href: "/download/ios" },
-              { label: "Android", href: "/download/android" },
-              { label: "Windows / Desktop", href: "/download/windows" },
+              { label: "iOS", href: "/home/comingSoon" },
+              { label: "Android", href: "/home/comingSoon" },
+              { label: "Windows / Desktop", href: "/home/comingSoon" },
             ]}
           />
 
@@ -162,26 +159,27 @@ export default function Footer() {
             title="Company"
             links={[
               { label: "About Us", href: "/home/company/about-us" },
-              { label: "Career", href: "/careers" },
-              { label: "Customers", href: "/customers" },
-              {
-                label: "Customer Affiliates",
-                href: "/home/company/customer-affiliates",
+             {
+                label: "Careers",
+                href: "/home/resources/careers",
               },
-              { label: "Events", href: "/events" },
+              { label: "Customer Affiliates", href: "/home/company/customer-affiliates" },
+              { label: "Events", href: "/home/resources/community-hub/events" },
               { label: "Partners", href: "/home/company/global-integrators" },
-              { label: "Consultants", href: "/consultants" },
-              { label: "Reviews", href: "/reviews" },
-              { label: "Press", href: "/press" },
-              { label: "Brand Roadmap", href: "/roadmap" },
-              { label: "Contact Us", href: "/home/company/contact-us" },
+              { label: "Consultants", href: "/home/company/consultants" },
+               { label: "Brand Roadmap", href: "/home/resources/community-hub/ideation" },
+                { label: "Contact Us", href: "/home/company/contact-us" },
+              { label: "Reviews", href: "/home/comingSoon" },
+              { label: "Press", href: "/home/comingSoon" },
+             
+             
             ]}
           />
         </div>
       </div>
 
       <div className="text-center text-xs text-gray-400 pb-6">
-        © 2026, BEAPONE Unified Operating System. All Rights Reserved.
+        © {new Date().getFullYear()}, BEAPONE Unified Operating System. All Rights Reserved.
       </div>
     </footer>
   );

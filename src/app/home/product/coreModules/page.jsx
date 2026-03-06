@@ -181,7 +181,7 @@ export default function CoreModulesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* ---------------- Hero ---------------- */}
-      <div className="w-full bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-700 px-6 py-10">
+      <div className="w-full bg-[#1B1464] px-6 py-10">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-3xl font-semibold text-white">Core Modules</h1>
           <p className="mt-1 text-sm text-indigo-200">

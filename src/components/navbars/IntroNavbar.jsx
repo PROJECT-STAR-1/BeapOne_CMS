@@ -10,7 +10,7 @@ export default function Navbar() {
         {/* Left */}
         <div className="flex items-center gap-4">
           <Link
-            href="#"
+            href="/home"
             className="rounded-md bg-indigo-700 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-800 transition"
           >
             Explore BEAPOne UBOS
@@ -19,10 +19,10 @@ export default function Navbar() {
 
         {/* Center */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
-          <Link href="#" className="hover:text-indigo-700 transition">
+          <Link href="/home/company/contact-us" className="hover:text-indigo-700 transition">
             Contact Sales
           </Link>
-          <Link href="#" className="hover:text-indigo-700 transition">
+          <Link href="/home/resources/request-demo" className="hover:text-indigo-700 transition">
             Schedule Demo
           </Link>
         </div>
@@ -39,7 +39,7 @@ export default function Navbar() {
           </button>
 
           <Link
-            href="#"
+            href="/home/comingSoon"
             className="rounded-md bg-emerald-500 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-600 transition"
           >
             Explore BEAPOne Lite

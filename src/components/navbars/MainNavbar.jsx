@@ -16,18 +16,16 @@ const navItems = [
   {
     label: "Solutions",
     children: [
-      { label: "Solutions Hub", href: "/home/solutions/solutionsHub" },
-      { label: "By Industry", href: "/capabilities/automation" },
-      { label: "By Professional Practice", href: "/capabilities/analytics" },
-      { label: "By Challenge", href: "/capabilities/integrations" },
-      { label: "By Expertise", href: "/capabilities/integrations" },
+      { label: "By Industry", href: "/home/solutions/solutionsHub" },
+      { label: "By Professional Practice", href: "/home/solutions/solutionsHub" },
+      { label: "By Challenge", href: "/home/solutions/solutionsHub" },
+      { label: "By Expertise", href: "/home/solutions/solutionsHub" },
     ],
   },
   {
     label: "Customer",
     children: [
-      { label: "Testimonials", href: "/home/customer/testimonials" },
-      { label: "Case Studies", href: "/modules/hr" },
+      { label: "Testimonials & Case Studies", href: "/home/customer/testimonials" },
     ],
   },
   {
@@ -82,31 +80,30 @@ const navItems = [
         label: "UBOS Expert",
         href: "/home/resources/ubos-mastery",
       },
-      {
-        label: "Careers",
-        href: "/home/resources/careers",
-      },
+      
     ],
   },
   {
     label: "Company",
     children: [
       { label: "About Us", href: "/home/company/about-us" },
-      { label: "Career", href: "/blog" },
-      { label: "Customers", href: "/case-studies" },
+     {
+        label: "Careers",
+        href: "/home/resources/careers",
+      },
       {
         label: "Customer Affiliates",
         href: "/home/company/customer-affiliates",
       },
-      { label: "Events", href: "/case-studies" },
+      { label: "Events", href: "/home/resources/community-hub/events" },
 
       { label: "Partners", href: "/home/company/global-integrators" },
-
-      { label: "Consultants", href: "/case-studies" },
-      { label: "Reviews", href: "/case-studies" },
-      { label: "Press", href: "/case-studies" },
-      { label: "Brand Roadmap", href: "/case-studies" },
+       { label: "Brand Roadmap", href: "/home/resources/community-hub/ideation" },
       { label: "Contact Us", href: "/home/company/contact-us" },
+      { label: "Consultants", href: "/home/company/consultants" },
+      { label: "Reviews", href: "/home/comingSoon" },
+      { label: "Press", href: "/home/comingSoon" },
+     
     ],
   },
 ];
@@ -168,7 +165,7 @@ export default function Navbar() {
                   </button>
 
                   {isOpen && (
-                    <div className="absolute left-0 top-full mt-2 w-56 rounded-md bg-indigo-200 shadow-lg z-50">
+                    <div className="absolute left-0 top-full mt-2 w-56 rounded-md bg-indigo-200 shadow-lg z-50 max-h-[70vh] overflow-y-auto">
                       <ul className="py-2 text-sm text-gray-700">
                         {item.children.map((child) => (
                           <li key={child.label}>
@@ -195,20 +192,22 @@ export default function Navbar() {
               <Search size={18} />
             </button>
 
-            <button className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
+            <Link 
+            href="/home/resources/community-hub/evolution"
+            className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
               <User size={18} />
               <span>Sign in</span>
-            </button>
+            </Link>
 
             <Link
-              href="#"
+              href="/home/comingSoon"
               className="rounded-md border border-white/30 px-4 py-1.5 text-sm text-white hover:bg-white/10 transition"
             >
               Go to BEAPOne Lite
             </Link>
 
             <Link
-              href="#"
+              href="/home/company/contact-us"
               className="rounded-md bg-white/10 px-4 py-1.5 text-sm text-white hover:bg-white/20 transition"
             >
               Contact Sales
@@ -245,7 +244,7 @@ export default function Navbar() {
                   </button>
 
                   {isOpen && (
-                    <div className="pl-4">
+                    <div className="pl-4 max-h-[50vh] overflow-y-auto">
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
