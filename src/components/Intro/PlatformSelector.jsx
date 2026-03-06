@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PlatformSelector() {
   return (
@@ -39,10 +40,12 @@ export default function PlatformSelector() {
               </span>
             </div>
 
-            <button className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-indigo-900 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800 transition">
+            <Link 
+            href="/home/company/contact-us"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-indigo-900 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800 transition">
               Continue to UBOS (Contact Sales)
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </div>
 
           {/* Lite Card */}
@@ -68,10 +71,12 @@ export default function PlatformSelector() {
               </span>
             </div>
 
-            <button className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-600 transition">
+            <Link 
+            href="/home/comingSoon"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-600 transition">
               Go to BEAPOne Lite Sign-Up
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -121,9 +126,11 @@ export default function PlatformSelector() {
         />
       </div>
 
-      <button className="mt-6 self-end rounded-lg bg-indigo-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-800 transition">
+      <Link
+      href="/home/comingSoon"
+       className="mt-6 self-end rounded-lg bg-indigo-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-800 transition">
         Sign Up
-      </button>
+      </Link>
     </div>
 
     {/* Lite Spotlight Card */}
@@ -146,9 +153,11 @@ export default function PlatformSelector() {
         />
       </div>
 
-      <button className="mt-6 self-end rounded-lg border border-emerald-500 px-5 py-2.5 text-sm font-semibold text-emerald-600 hover:bg-emerald-50 transition">
+      <Link
+      href="/home/comingSoon"
+       className="mt-6 self-end rounded-lg border border-emerald-500 px-5 py-2.5 text-sm font-semibold text-emerald-600 hover:bg-emerald-50 transition">
         Sign Up
-      </button>
+      </Link>
     </div>
   </div>
 </section>

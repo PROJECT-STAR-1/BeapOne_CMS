@@ -16,18 +16,16 @@ const navItems = [
   {
     label: "Solutions",
     children: [
-      { label: "Solutions Hub", href: "/home/solutions/solutionsHub" },
-      { label: "By Industry", href: "/capabilities/automation" },
-      { label: "By Professional Practice", href: "/capabilities/analytics" },
-      { label: "By Challenge", href: "/capabilities/integrations" },
-      { label: "By Expertise", href: "/capabilities/integrations" },
+      { label: "By Industry", href: "/home/solutions/solutionsHub" },
+      { label: "By Professional Practice", href: "/home/solutions/solutionsHub" },
+      { label: "By Challenge", href: "/home/solutions/solutionsHub" },
+      { label: "By Expertise", href: "/home/solutions/solutionsHub" },
     ],
   },
   {
     label: "Customer",
     children: [
-      { label: "Testimonials", href: "/home/customer/testimonials" },
-      { label: "Case Studies", href: "/modules/hr" },
+      { label: "Testimonials & Case Studies", href: "/home/customer/testimonials" },
     ],
   },
   {
@@ -97,15 +95,15 @@ const navItems = [
         label: "Customer Affiliates",
         href: "/home/company/customer-affiliates",
       },
-      { label: "Events", href: "/case-studies" },
+      { label: "Events", href: "/home/resources/community-hub/events" },
 
       { label: "Partners", href: "/home/company/global-integrators" },
-
-      { label: "Consultants", href: "/case-studies" },
-      { label: "Reviews", href: "/case-studies" },
-      { label: "Press", href: "/case-studies" },
-      { label: "Brand Roadmap", href: "/case-studies" },
+       { label: "Brand Roadmap", href: "/home/resources/community-hub/ideation" },
       { label: "Contact Us", href: "/home/company/contact-us" },
+      { label: "Consultants", href: "/home/company/consultants" },
+      { label: "Reviews", href: "/home/comingSoon" },
+      { label: "Press", href: "/home/comingSoon" },
+     
     ],
   },
 ];
@@ -194,10 +192,12 @@ export default function Navbar() {
               <Search size={18} />
             </button>
 
-            <button className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
+            <Link 
+            href="/home/resources/community-hub/evolution"
+            className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
               <User size={18} />
               <span>Sign in</span>
-            </button>
+            </Link>
 
             <Link
               href="/home/comingSoon"
