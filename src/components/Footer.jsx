@@ -43,19 +43,19 @@ export default function Footer() {
                 Connect With Us
               </p>
               <div className="flex gap-3">
-                <a href="" aria-label="X">
+                <a href="/home/comingSoon" aria-label="X">
                   <X size={18} />
                 </a>
-                <a href="" aria-label="Instagram">
+                <a href="/home/comingSoon" aria-label="Instagram">
                   <Instagram size={18} />
                 </a>
-                <a href="" aria-label="YouTube">
+                <a href="/home/comingSoon" aria-label="YouTube">
                   <Youtube size={18} />
                 </a>
-                <a href="" aria-label="LinkedIn">
+                <a href="/home/comingSoon" aria-label="LinkedIn">
                   <Linkedin size={18} />
                 </a>
-                <a href="" aria-label="Facebook">
+                <a href="/home/comingSoon" aria-label="Facebook">
                   <Facebook size={18} />
                 </a>
               </div>
@@ -67,21 +67,20 @@ export default function Footer() {
             links={[
               { label: "Capabilities", href: "/home/product/capabilities" },
               { label: "Features", href: "/home/product/features" },
-              { label: "Modules", href: "/home/product/modules" },
+              { label: "Modules", href: "/home/product/coreModules" },
             ]}
           />
 
           <FooterColumn
             title="Solutions"
             links={[
-                { label: "Solutions Hub", href: "/home/solutions/solutionsHub" },
-              { label: "By Industry", href: "/solutions/industry" },
+              { label: "By Industry", href: "/home/solutions/solutionsHub" },
               {
                 label: "By Professional Practice",
-                href: "/solutions/practice",
+                href: "/home/solutions/solutionsHub",
               },
-              { label: "By Challenge", href: "/solutions/challenges" },
-              { label: "By Expertise", href: "/solutions/expertise" },
+              { label: "By Challenge", href: "/home/solutions/solutionsHub" },
+              { label: "By Expertise", href: "/home/solutions/solutionsHub" },
             ]}
           />
 
@@ -89,7 +88,7 @@ export default function Footer() {
             title="Customer"
             links={[
               { label: "Testimonials", href: "/home/customer/testimonials" },
-              { label: "Case Studies", href: "/case-studies" },
+              { label: "Case Studies", href: "/home/customer/testimonials" },
             ]}
           />
 
@@ -98,7 +97,7 @@ export default function Footer() {
             links={[
               {
                 label: "Knowledge Centre",
-                href: "/resources/knowledge-centre",
+                href: "/home/resources/knowledge-library",
               },
               { label: "Blog", href: "/home/resources/blog" },
               { label: "Newsroom", href: "/home/resources/news-room" },
@@ -150,9 +149,9 @@ export default function Footer() {
             ]}
             extraTitle="Download"
             extraLinks={[
-              { label: "iOS", href: "/download/ios" },
-              { label: "Android", href: "/download/android" },
-              { label: "Windows / Desktop", href: "/download/windows" },
+              { label: "iOS", href: "/home/comingSoon" },
+              { label: "Android", href: "/home/comingSoon" },
+              { label: "Windows / Desktop", href: "/home/comingSoon" },
             ]}
           />
 
@@ -164,18 +163,16 @@ export default function Footer() {
                 label: "Careers",
                 href: "/home/resources/careers",
               },
-              { label: "Customers", href: "/customers" },
-              {
-                label: "Customer Affiliates",
-                href: "/home/company/customer-affiliates",
-              },
-              { label: "Events", href: "/events" },
+              { label: "Customer Affiliates", href: "/home/company/customer-affiliates" },
+              { label: "Events", href: "/home/resources/community-hub/events" },
               { label: "Partners", href: "/home/company/global-integrators" },
-              { label: "Consultants", href: "/consultants" },
-              { label: "Reviews", href: "/reviews" },
-              { label: "Press", href: "/press" },
-              { label: "Brand Roadmap", href: "/roadmap" },
-              { label: "Contact Us", href: "/home/company/contact-us" },
+              { label: "Consultants", href: "/home/company/consultants" },
+               { label: "Brand Roadmap", href: "/home/resources/community-hub/ideation" },
+                { label: "Contact Us", href: "/home/company/contact-us" },
+              { label: "Reviews", href: "/home/comingSoon" },
+              { label: "Press", href: "/home/comingSoon" },
+             
+             
             ]}
           />
         </div>
