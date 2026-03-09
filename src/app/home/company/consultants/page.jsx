@@ -10,6 +10,7 @@ import {
   Infinity,
   CheckCircle, ArrowRight
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -145,7 +146,7 @@ export default function Home() {
     <div className="grid md:grid-cols-2 gap-10">
 
       {/* LEFT CARD */}
-      <div className="bg-white border border-gray-200 rounded-xl shadow-card p-8 border-l-4 border-indigo-500">
+      <div className="bg-white border  rounded-xl shadow-card p-8 border-l-4 border-indigo-500">
 
         <h3 className="text-lg font-semibold text-indigo-700 mb-6">
           Program Benefits
@@ -154,35 +155,35 @@ export default function Home() {
         <ul className="space-y-5 text-sm text-gray-600">
 
           <li className="flex gap-3">
-            <CheckCircle className="text-indigo-600 w-5 h-5 mt-[2px]" />
+            <CheckCircle className="text-indigo-600 w-5 h-5 mt-0.5" />
             <span>
               <b className="text-indigo-600">Credibility:</b> Increase your business's trustworthiness with the official badge.
             </span>
           </li>
 
           <li className="flex gap-3">
-            <CheckCircle className="text-indigo-600 w-5 h-5 mt-[2px]" />
+            <CheckCircle className="text-indigo-600 w-5 h-5 mt-0.5" />
             <span>
               <b className="text-indigo-600">Promotion:</b> Get your services promoted to the vast BEAPOne UBOS customer base.
             </span>
           </li>
 
           <li className="flex gap-3">
-            <CheckCircle className="text-indigo-600 w-5 h-5 mt-[2px]" />
+            <CheckCircle className="text-indigo-600 w-5 h-5 mt-0.5" />
             <span>
               <b className="text-indigo-600">Resources:</b> Access partner portals, marketing collateral, and development tools.
             </span>
           </li>
 
           <li className="flex gap-3">
-            <CheckCircle className="text-indigo-600 w-5 h-5 mt-[2px]" />
+            <CheckCircle className="text-indigo-600 w-5 h-5 mt-0.5" />
             <span>
               <b className="text-indigo-600">Early Access:</b> Participate in beta testing and receive early product updates.
             </span>
           </li>
 
           <li className="flex gap-3">
-            <CheckCircle className="text-indigo-600 w-5 h-5 mt-[2px]" />
+            <CheckCircle className="text-indigo-600 w-5 h-5 mt-0.5" />
             <span>
               <b className="text-indigo-600">Tools:</b> Get a free sandbox account for experimentation and development.
             </span>
@@ -194,7 +195,7 @@ export default function Home() {
 
 
       {/* RIGHT CARD */}
-      <div className="bg-white border border-gray-200 rounded-xl shadow-card p-8 border-l-4 border-green-500">
+      <div className="bg-white border rounded-xl shadow-card p-8 border-l-4 border-green-500">
 
         <h3 className="text-lg font-semibold text-green-700 mb-6">
           Eligibility & Requirements
@@ -234,10 +235,12 @@ export default function Home() {
 
         </div>
 
-        <button className="mt-6 bg-green-500 hover:bg-green-600 transition text-white px-6 py-3 rounded-full flex items-center gap-2 text-sm font-medium">
+        <Link
+        href="/home/comingSoon"
+         className="mt-6 bg-green-500 hover:bg-green-600 transition text-white px-6 py-3 rounded-full flex items-center gap-2 text-sm font-medium">
           Apply to Become Official
           <ArrowRight size={16} />
-        </button>
+        </Link>
 
       </div>
 
