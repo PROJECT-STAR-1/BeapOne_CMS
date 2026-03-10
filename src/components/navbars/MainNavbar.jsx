@@ -193,7 +193,7 @@ export default function Navbar() {
             </button>
 
             <Link 
-            href="/home/resources/community-hub/evolution"
+            href="/auth/login"
             className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
               <User size={18} />
               <span>Sign in</span>
