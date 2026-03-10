@@ -1,132 +1,115 @@
 "use client"
 
 import { useState } from "react"
-import { useForm } from "react-hook-form"
+import { useForm, FormProvider } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useRouter } from "next/navigation"
+
 import { signupSchema } from "@/lib/validation/signupSchema"
+import { signupSteps } from "./signupSteps"
 
 import Stepper from "./Stepper"
-import PersonalInfo from "./PersonalInfo"
-import Organization from "./Organization"
-import Security from "./Security"
 
 export default function SignupForm() {
 
-  const [step, setStep] = useState(1)
+  const router = useRouter()
+  const [step, setStep] = useState(0)
 
- const form = useForm({
-  resolver: zodResolver(signupSchema),
-  mode: "onChange",
-  shouldUnregister: true
-})
+  const methods = useForm({
+    resolver: zodResolver(signupSchema),
+    mode: "onChange",
+    defaultValues: {
+      country: "Nigeria"
+    }
+  })
 
-const next = async (fields) => {
-  const valid = await form.trigger(fields)
+  const currentStep = signupSteps[step]
+  const StepComponent = currentStep.component
 
-  if (!valid) return
+  const next = async () => {
+    const valid = await methods.trigger(currentStep.fields)
+    if (!valid) return
+    setStep((s) => s + 1)
+  }
 
-  setStep((prev) => prev + 1)
-}
+  const back = () => setStep((s) => s - 1)
 
-const back = () => setStep((prev) => prev - 1)
-
-  const submit = (data) => {
-    console.log(data)
+  const submit = async (data) => {
+    console.log("FORM DATA:", data)
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+    router.push("/auth/login?created=true")
   }
 
   return (
 
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center px-4">
 
-      <form
-        onSubmit={form.handleSubmit(submit)}
-        className="bg-white p-10 rounded-xl shadow-sm w-[520px]"
-      >
+      <FormProvider {...methods}>
 
-        <h1 className="text-3xl font-semibold text-gray-900">
-          Create your account
-        </h1>
+        <form
+          onSubmit={methods.handleSubmit(submit)}
+          className="bg-white max-w-xl p-10 rounded-2xl shadow-sm "
+        >
 
-        <p className="text-gray-500 mt-2">
-          Request access to the BEAPOne UBOS platform
-        </p>
+          {/* Header */}
+          <div className="mb-6">
 
-        <div className="mt-6">
-          <Stepper step={step} />
-        </div>
+            <h1 className="text-2xl font-semibold text-gray-900">
+              Create your account
+            </h1>
 
-        <div className="mt-8">
+            <p className="text-gray-500 mt-1 text-sm">
+              Request access to the BEAPOne UBOS platform
+            </p>
 
-          {step === 1 && (
-            <PersonalInfo
-              form={form}
-              next={() =>
-                next([
-                  "firstName",
-                  "lastName",
-                  "email",
-                  "phone"
-                ])
-              }
-            />
-          )}
+          </div>
 
-          {step === 2 && (
-            <Organization
-              form={form}
+          <Stepper step={step} steps={signupSteps} />
+
+          <div className="mt-8">
+
+            <StepComponent
+              next={next}
               back={back}
-              next={() =>
-                next([
-                  "organizationName",
-                  "organizationType",
-                  "jobTitle",
-                  "department",
-                  "employees",
-                  "country"
-                ])
-              }
+              isLast={step === signupSteps.length - 1}
             />
-          )}
 
-          {step === 3 && (
-            <Security
-              form={form}
-              back={back}
-            />
-          )}
+          </div>
 
-        </div>
+          {/* Footer */}
+          <div className="mt-6 text-center text-sm text-gray-500">
 
-        {/* Sign in link */}
-
-        <p className="text-center text-sm text-gray-500 mt-6">
-          Already have an account?{" "}
-          <span className="text-blue-900 font-medium cursor-pointer">
-            Sign In
-          </span>
-        </p>
-
-        {/* Compliance badges */}
-
-        <div className="flex justify-center gap-2 mt-6 flex-wrap">
-
-          {["NDPR", "CBN", "NITDA", "CAC", "ISO 27001"].map((item) => (
+            Already have an account?{" "}
             <span
-              key={item}
-              className="text-xs border px-3 py-1 rounded-full text-gray-500"
+              className="text-blue-700 font-medium cursor-pointer"
+              onClick={() => router.push("/auth/login")}
             >
-              {item}
+              Sign In
             </span>
-          ))}
 
-        </div>
+          </div>
 
-        <p className="text-xs text-gray-400 text-center mt-4">
-          Your data is processed in accordance with the Nigeria Data Protection Regulation (NDPR)
-          and stored securely in compliance with CBN and NITDA requirements.
-        </p>
+          {/* Compliance badges */}
+          <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs">
 
-      </form>
+            <span className="border px-2 py-1 rounded-full">NDPR</span>
+            <span className="border px-2 py-1 rounded-full">CBN</span>
+            <span className="border px-2 py-1 rounded-full">NITDA</span>
+            <span className="border px-2 py-1 rounded-full">CAC</span>
+            <span className="border px-2 py-1 rounded-full">ISO 27001</span>
+
+          </div>
+
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Your data is processed in accordance with the Nigeria Data Protection
+            Regulation (NDPR) and stored securely in compliance with CBN and
+            NITDA requirements.
+          </p>
+
+        </form>
+
+      </FormProvider>
+
     </div>
   )
 }

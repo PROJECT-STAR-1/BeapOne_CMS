@@ -1,51 +1,40 @@
 import { Check } from "lucide-react"
 
-export default function Stepper({ step }) {
-
-  const steps = [
-    "Personal Info",
-    "Organization",
-    "Security"
-  ]
+export default function Stepper({ step, steps }) {
 
   return (
 
     <div className="flex items-center w-full mt-6 mb-8">
 
-      {steps.map((label, index) => {
+      {steps.map((item, index) => {
 
-        const num = index + 1
-        const active = step === num
-        const completed = step > num
+        const active = step === index
+        const completed = step > index
 
         return (
 
-          <div key={label} className="flex items-center flex-1">
-
-            {/* Circle */}
+          <div key={item.id} className="flex items-center flex-1">
 
             <div
               className={`w-9 h-9 flex items-center justify-center rounded-full text-sm font-semibold
-              
+
               ${completed
                 ? "bg-green-500 text-white"
                 : active
-                ? "bg-[#243C84] text-white"
+                ? "bg-blue-900 text-white"
                 : "bg-gray-200 text-gray-500"
               }
-              
+
               `}
             >
 
-              {completed ? <Check size={16} /> : num}
+              {completed ? <Check size={16} /> : index + 1}
 
             </div>
 
-            {/* Label */}
-
             <span
               className={`ml-3 text-sm
-              
+
               ${
                 completed
                   ? "text-green-600 font-medium"
@@ -53,15 +42,13 @@ export default function Stepper({ step }) {
                   ? "text-gray-900 font-medium"
                   : "text-gray-400"
               }
-              
+
               `}
             >
-              {label}
+              {item.label}
             </span>
 
-            {/* Line */}
-
-            {num !== steps.length && (
+            {index !== steps.length - 1 && (
 
               <div
                 className={`flex-1 h-[2px] mx-4

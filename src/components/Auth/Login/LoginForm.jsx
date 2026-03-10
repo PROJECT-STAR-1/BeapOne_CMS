@@ -1,10 +1,23 @@
 "use client";
-
+import { useSearchParams } from "next/navigation"
 import { Mail, Lock, Eye, Shield } from "lucide-react";
 
 export default function LoginPage() {
+
+   const params = useSearchParams()
+  const created = params.get("created")
+
+
   return (
     <div className="space-y-6">
+
+        {created && (
+
+        <div className="bg-green-50 border border-green-200 text-green-700 p-3 rounded mb-4">
+          ✅ Account created successfully. Please sign in.
+        </div>
+
+      )}
 
       {/* Heading */}
       <div>

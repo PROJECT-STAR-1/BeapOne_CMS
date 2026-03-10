@@ -1,38 +1,33 @@
-import { Briefcase, Building2, Globe } from "lucide-react"
+import { useFormContext } from "react-hook-form"
 
-export default function Organization({ form, next, back }) {
+export default function Organization({ next, back }) {
 
-  const { register, formState } = form
+  const { register } = useFormContext()
 
   return (
+
     <div className="space-y-6">
 
       {/* Organization Name */}
-      <div className="space-y-2">
-        <label className="text-sm font-medium">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
           Organization Name <span className="text-red-500">*</span>
         </label>
-
-        <div className="relative">
-          <Building2 className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
-
-          <input
-            {...register("organizationName")}
-            placeholder="e.g. Dangote Industries Limited"
-            className="w-full border rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
-        </div>
+        <input
+          {...register("organizationName")}
+          placeholder="e.g. Dangote Industries Limited"
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
 
       {/* Organization Type */}
-      <div className="space-y-2">
-        <label className="text-sm font-medium">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
           Organization Type <span className="text-red-500">*</span>
         </label>
-
         <select
           {...register("organizationType")}
-          className="w-full border rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Select organization type</option>
           <option>Private</option>
@@ -42,48 +37,41 @@ export default function Organization({ form, next, back }) {
         </select>
       </div>
 
-      {/* Job Title + Department */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Job + Department */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <div className="space-y-2">
-          <label className="text-sm font-medium">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Job Title <span className="text-red-500">*</span>
           </label>
-
-          <div className="relative">
-            <Briefcase className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
-
-            <input
-              {...register("jobTitle")}
-              placeholder="e.g. CFO"
-              className="w-full border rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
-            />
-          </div>
+          <input
+            {...register("jobTitle")}
+            placeholder="e.g. CFO"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
         </div>
 
-        <div className="space-y-2">
-          <label className="text-sm font-medium">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Department <span className="text-red-500">*</span>
           </label>
-
           <input
             {...register("department")}
             placeholder="e.g. Finance"
-            className="w-full border rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
       </div>
 
       {/* Number of Employees */}
-      <div className="space-y-2">
-        <label className="text-sm font-medium">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
           Number of Employees
         </label>
-
         <select
           {...register("employees")}
-          className="w-full border rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Select range</option>
           <option>1 - 10</option>
@@ -92,27 +80,18 @@ export default function Organization({ form, next, back }) {
           <option>201 - 500</option>
           <option>500+</option>
         </select>
-
-        {formState.errors.employees && (
-          <p className="text-red-500 text-sm">
-            {formState.errors.employees.message}
-          </p>
-        )}
       </div>
 
       {/* Country */}
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Country</label>
-
-        <div className="relative">
-          <Globe className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
-
-          <input
-  {...register("country")}
-  defaultValue="Nigeria"
-  readOnly
-/>
-        </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Country
+        </label>
+        <input
+          {...register("country")}
+          readOnly
+          className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-gray-100 text-gray-600"
+        />
       </div>
 
       {/* Buttons */}
@@ -121,7 +100,7 @@ export default function Organization({ form, next, back }) {
         <button
           type="button"
           onClick={back}
-          className="flex-1 border border-gray-300 py-3 rounded-lg font-medium hover:bg-gray-50"
+          className="flex-1 border border-gray-300 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-50"
         >
           Back
         </button>

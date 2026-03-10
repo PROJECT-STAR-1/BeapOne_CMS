@@ -12,7 +12,6 @@ export const signupSchema = z.object({
   department: z.string().min(2, "Department required"),
 
   employees: z.string().optional(),
-
   country: z.string().min(2),
 
   password: z.string().min(8, "Password must be at least 8 characters"),
