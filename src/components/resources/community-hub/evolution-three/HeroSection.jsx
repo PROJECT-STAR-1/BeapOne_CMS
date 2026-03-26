@@ -123,7 +123,7 @@ export default function HeroSection({
               </div>
 
               {/* Primary Hub Focus Dropdown Simulation */}
-              <div>
+              {/* <div>
                 <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">
                   PRIMARY HUB FOCUS
                 </label>
@@ -139,13 +139,13 @@ export default function HeroSection({
                       Development (Hub A)
                     </option>
                     <option value="Design (Hub B)">Design (Hub B)</option>
-                  </select>
+                  </select> */}
                   {/* Custom Dropdown Chevron to match input style */}
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                  {/* <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                     <ChevronDown size={16} />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Continue Registration Button */}

@@ -17,7 +17,10 @@ const navItems = [
     label: "Solutions",
     children: [
       { label: "By Industry", href: "/home/solutions/solutionsHub" },
-      { label: "By Professional Practice", href: "/home/solutions/solutionsHub" },
+      {
+        label: "By Professional Practice",
+        href: "/home/solutions/solutionsHub",
+      },
       { label: "By Challenge", href: "/home/solutions/solutionsHub" },
       { label: "By Expertise", href: "/home/solutions/solutionsHub" },
     ],
@@ -25,7 +28,10 @@ const navItems = [
   {
     label: "Customer",
     children: [
-      { label: "Testimonials & Case Studies", href: "/home/customer/testimonials" },
+      {
+        label: "Testimonials & Case Studies",
+        href: "/home/customer/testimonials",
+      },
     ],
   },
   {
@@ -47,6 +53,7 @@ const navItems = [
         href: "/home/resources/community-hub-main",
       },
       { label: "FAQs", href: "/home/resources/faqs" },
+      { label: "Resellers", href: "/home/resources/resellers" },
       {
         label: "Learning Certification Registry",
         href: "/home/resources/certifications",
@@ -80,14 +87,13 @@ const navItems = [
         label: "UBOS Expert",
         href: "/home/resources/ubos-mastery",
       },
-      
     ],
   },
   {
     label: "Company",
     children: [
       { label: "About Us", href: "/home/company/about-us" },
-     {
+      {
         label: "Careers",
         href: "/home/resources/careers",
       },
@@ -98,12 +104,14 @@ const navItems = [
       { label: "Events", href: "/home/resources/community-hub/events" },
 
       { label: "Partners", href: "/home/company/global-integrators" },
-       { label: "Brand Roadmap", href: "/home/resources/community-hub/ideation" },
+      {
+        label: "Brand Roadmap",
+        href: "/home/resources/community-hub/ideation",
+      },
       { label: "Contact Us", href: "/home/company/contact-us" },
       { label: "Consultants", href: "/home/company/consultants" },
       { label: "Reviews", href: "/home/comingSoon" },
       { label: "Press", href: "/home/comingSoon" },
-     
     ],
   },
 ];
@@ -192,9 +200,10 @@ export default function Navbar() {
               <Search size={18} />
             </button>
 
-            <Link 
-            href="/auth/login"
-            className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition">
+            <Link
+              href="/auth/login"
+              className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition"
+            >
               <User size={18} />
               <span>Sign in</span>
             </Link>

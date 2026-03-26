@@ -101,8 +101,14 @@ export default function Footer() {
               },
               { label: "Blog", href: "/home/resources/blog" },
               { label: "Newsroom", href: "/home/resources/news-room" },
-              { label: "Downloads Library", href: "/home/resources/downloadsLibrary" },
-              { label: "Apps & Integrations", href: "/home/resources/appsIntegration" },
+              {
+                label: "Downloads Library",
+                href: "/home/resources/downloadsLibrary",
+              },
+              {
+                label: "Apps & Integrations",
+                href: "/home/resources/appsIntegration",
+              },
               {
                 label: "Community Learning & Certifications",
                 href: "/home/resources/community-learning",
@@ -112,6 +118,7 @@ export default function Footer() {
                 href: "/home/resources/community-hub-main",
               },
               { label: "FAQs", href: "/home/resources/faqs" },
+              { label: "Resellers", href: "/home/resources/resellers" },
               {
                 label: "Learning Certification Registry",
                 href: "/home/resources/certifications",
@@ -145,7 +152,6 @@ export default function Footer() {
                 label: "UBOS Expert",
                 href: "/home/resources/ubos-mastery",
               },
-              
             ]}
             extraTitle="Download"
             extraLinks={[
@@ -159,27 +165,32 @@ export default function Footer() {
             title="Company"
             links={[
               { label: "About Us", href: "/home/company/about-us" },
-             {
+              {
                 label: "Careers",
                 href: "/home/resources/careers",
               },
-              { label: "Customer Affiliates", href: "/home/company/customer-affiliates" },
+              {
+                label: "Customer Affiliates",
+                href: "/home/company/customer-affiliates",
+              },
               { label: "Events", href: "/home/resources/community-hub/events" },
               { label: "Partners", href: "/home/company/global-integrators" },
               { label: "Consultants", href: "/home/company/consultants" },
-               { label: "Brand Roadmap", href: "/home/resources/community-hub/ideation" },
-                { label: "Contact Us", href: "/home/company/contact-us" },
+              {
+                label: "Brand Roadmap",
+                href: "/home/resources/community-hub/ideation",
+              },
+              { label: "Contact Us", href: "/home/company/contact-us" },
               { label: "Reviews", href: "/home/comingSoon" },
               { label: "Press", href: "/home/comingSoon" },
-             
-             
             ]}
           />
         </div>
       </div>
 
       <div className="text-center text-xs text-gray-400 pb-6">
-        © {new Date().getFullYear()}, BEAPONE Unified Operating System. All Rights Reserved.
+        © {new Date().getFullYear()}, BEAPONE Unified Operating System. All
+        Rights Reserved.
       </div>
     </footer>
   );
