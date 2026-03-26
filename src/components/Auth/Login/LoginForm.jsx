@@ -2,7 +2,7 @@
 import { useSearchParams } from "next/navigation"
 import { Mail, Lock, Eye, Shield } from "lucide-react";
 
-export default function LoginPage() {
+export default function LoginForm() {
 
    const params = useSearchParams()
   const created = params.get("created")

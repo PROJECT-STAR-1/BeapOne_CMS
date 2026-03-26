@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 
 export default function CtaFooterSection() {
@@ -17,9 +17,11 @@ export default function CtaFooterSection() {
           <button className="bg-[#1B1464] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:opacity-90 transition-opacity min-w-[220px] font-instrument-sans">
             Request a Personalized Demo
           </button>
-          <button className="bg-[#00C853] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:opacity-90 transition-opacity min-w-[220px] font-instrument-sans">
+          <Link
+          href="/home/resources/community-hub/evolution-two"
+           className="bg-[#00C853] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:opacity-90 transition-opacity min-w-[220px] font-instrument-sans">
             Join Our Ideation Community
-          </button>
+          </Link>
         </div>
       </div>
     </section>
