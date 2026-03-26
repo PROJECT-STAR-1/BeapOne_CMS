@@ -151,6 +151,11 @@ export default function Navbar() {
               BEAPOne UBOS
             </span>
           </a>
+          <a href="/">
+            <span className="text-white ">
+              Intro Page
+            </span>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-6 text-sm text-white/80">

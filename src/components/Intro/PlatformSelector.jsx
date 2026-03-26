@@ -8,78 +8,112 @@ export default function PlatformSelector() {
       {/* ===================== */}
       {/* Section 1: Comparison */}
       {/* ===================== */}
-      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">
-          Which BEAPOne Platform is Right For You?
-        </h2>
-        <p className="mt-3 text-gray-500">
-          Choose the solution built specifically for your business size and complexity.
+     <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+  <h2 className="text-3xl font-bold text-gray-900">
+    Which BEAPOne Platform is Right For You?
+  </h2>
+  <p className="mt-3 text-gray-500">
+    Choose the solution built specifically for your business size and complexity.
+  </p>
+
+  {/* Top 2 Cards */}
+  <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* UBOS Card */}
+    <div className="rounded-2xl border-2 border-indigo-900 p-8 text-left flex flex-col justify-between">
+      <div>
+        <h3 className="text-xl font-bold text-indigo-900">
+          BEAPOne UBOS
+        </h3>
+        <p className="mt-1 font-medium text-gray-800">
+          The Integrated Enterprise Operating System
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* UBOS Card */}
-          <div className="rounded-2xl border-2 border-indigo-900 p-8 text-left flex flex-col justify-between">
-            <div>
-              <h3 className="text-xl font-bold text-indigo-900">
-                BEAPOne UBOS
-              </h3>
-              <p className="mt-1 font-medium text-gray-800">
-                The Integrated Enterprise Operating System
-              </p>
+        <ul className="mt-6 space-y-3 text-sm text-gray-600">
+          <li>• Multi-entity and Multi-jurisdictional financial consolidation.</li>
+          <li>• Dedicated Supply Chain Management (SCM) & 3PL integration.</li>
+          <li>• Complex Goal, Program, and Portfolio Management (PPPM).</li>
+          <li>• Customizable BPO & BPC Solution Management.</li>
+          <li>• Dedicated Enterprise Compliance and Audit modules.</li>
+        </ul>
 
-              <ul className="mt-6 space-y-3 text-sm text-gray-600">
-                <li>• Multi-entity and Multi-jurisdictional financial consolidation.</li>
-                <li>• Dedicated Supply Chain Management (SCM) & 3PL integration.</li>
-                <li>• Complex Goal, Program, and Portfolio Management (PPPM).</li>
-                <li>• Customizable BPO & BPC Solution Management.</li>
-                <li>• Dedicated Enterprise Compliance and Audit modules.</li>
-              </ul>
+        <span className="inline-block mt-6 rounded-full bg-indigo-100 px-4 py-1 text-xs font-semibold text-indigo-900">
+          Best For: Medium to Large Businesses (50+ Users)
+        </span>
+      </div>
 
-              <span className="inline-block mt-6 rounded-full bg-indigo-100 px-4 py-1 text-xs font-semibold text-indigo-900">
-                Best For: Medium to Large Businesses (50+ Users)
-              </span>
-            </div>
+      <Link 
+        href="/home/company/contact-us"
+        className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-indigo-900 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800 transition">
+        Continue to UBOS (Contact Sales)
+        <ArrowRight size={16} />
+      </Link>
+    </div>
 
-            <Link 
-            href="/home/company/contact-us"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-indigo-900 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-800 transition">
-              Continue to UBOS (Contact Sales)
-              <ArrowRight size={16} />
-            </Link>
-          </div>
+    {/* Lite Card */}
+    <div className="rounded-2xl border-2 border-emerald-500 p-8 text-left flex flex-col justify-between">
+      <div>
+        <h3 className="text-xl font-bold text-emerald-600">
+          BEAPOne Lite
+        </h3>
+        <p className="mt-1 font-medium text-gray-800">
+          The Essential Business Management Toolkit
+        </p>
 
-          {/* Lite Card */}
-          <div className="rounded-2xl border-2 border-emerald-500 p-8 text-left flex flex-col justify-between">
-            <div>
-              <h3 className="text-xl font-bold text-emerald-600">
-                BEAPOne Lite
-              </h3>
-              <p className="mt-1 font-medium text-gray-800">
-                The Essential Business Management Toolkit
-              </p>
+        <ul className="mt-6 space-y-3 text-sm text-gray-600">
+          <li>• Simplified General Ledger and basic Accounts Payable/Receivable.</li>
+          <li>• Essential Task, Schedule, and To-Do Management.</li>
+          <li>• Single-entity workforce and HR management.</li>
+          <li>• Standardized reporting and communication tools.</li>
+          <li>• Focus on quick setup and ease of use.</li>
+        </ul>
 
-              <ul className="mt-6 space-y-3 text-sm text-gray-600">
-                <li>• Simplified General Ledger and basic Accounts Payable/Receivable.</li>
-                <li>• Essential Task, Schedule, and To-Do Management.</li>
-                <li>• Single-entity workforce and HR management.</li>
-                <li>• Standardized reporting and communication tools.</li>
-                <li>• Focus on quick setup and ease of use.</li>
-              </ul>
+        <span className="inline-block mt-6 rounded-full bg-emerald-100 px-4 py-1 text-xs font-semibold text-emerald-700">
+          Best For: Small to Medium Businesses (1–50 Users)
+        </span>
+      </div>
 
-              <span className="inline-block mt-6 rounded-full bg-emerald-100 px-4 py-1 text-xs font-semibold text-emerald-700">
-                Best For: Small to Medium Businesses (1–50 Users)
-              </span>
-            </div>
+      <Link 
+        href="/home/comingSoon"
+        className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-600 transition">
+        Go to BEAPOne Lite Sign-Up
+        <ArrowRight size={16} />
+      </Link>
+    </div>
+  </div>
 
-            <Link 
-            href="/home/comingSoon"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-600 transition">
-              Go to BEAPOne Lite Sign-Up
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
+  {/* Centered Third Card */}
+  <div className="mt-8 flex justify-center">
+    <div className="w-full md:w-2/3 lg:w-1/2 rounded-2xl border-2 border-rose-500 p-8 text-left flex flex-col justify-between">
+      <div>
+        <h3 className="text-xl font-bold text-rose-600">
+          BEAP Community Hub
+        </h3>
+        <p className="mt-1 font-medium text-gray-800">
+          Connect, Learn, and Grow with Like-Minded Entrepreneurs
+        </p>
+
+        <ul className="mt-6 space-y-3 text-sm text-gray-600">
+          <li>• Join a vibrant network of entrepreneurs and professionals.</li>
+          <li>• Access discussions, shared insights, and peer support.</li>
+          <li>• Participate in community events, workshops, and conversations.</li>
+          <li>• Discover opportunities for collaboration and growth.</li>
+          <li>• Stay informed with updates, trends, and shared resources.</li>
+        </ul>
+
+        <span className="inline-block mt-6 rounded-full bg-rose-100 px-4 py-1 text-xs font-semibold text-rose-700">
+          Best For: Individuals, Startups, and Growing Communities
+        </span>
+      </div>
+
+      <Link 
+        href="/home/resources/community-hub/evolution-three"
+        className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-rose-500 px-6 py-3 text-sm font-semibold text-white hover:bg-rose-600 transition">
+        Join the Community
+        <ArrowRight size={16} />
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* ===================== */}
       {/* Section 2: Spotlight  */}
