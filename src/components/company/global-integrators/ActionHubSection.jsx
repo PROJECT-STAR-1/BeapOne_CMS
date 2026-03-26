@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ArrowRight } from "lucide-react";
-
+import Link from "next/link";
 const ACTION_HUB = [
   {
     title: "Register New Lead / Deal",
@@ -11,6 +11,7 @@ const ACTION_HUB = [
     themeColor: "bg-[#1B1464]",
     titleColor: "text-[#1B1464]",
     borderColor: "border-t-[#1B1464]",
+    link: "/comingSoon",
   },
   {
     title: "Marketing Development Funds (MDF)",
@@ -25,6 +26,7 @@ const ACTION_HUB = [
     themeColor: "bg-[#00C853]",
     titleColor: "text-[#00C853]",
     borderColor: "border-t-[#00C853]",
+    link: "/comingSoon",
   },
   {
     title: "Certification Status (Hub O)",
@@ -41,9 +43,9 @@ const ACTION_HUB = [
     themeColor: "bg-[#D50000]",
     titleColor: "text-[#D50000]",
     borderColor: "border-t-[#D50000]",
+    link: "/home/company/global-integrators/partnerOnboarding", 
   },
 ];
-
 export default function ActionHubSection() {
   return (
     <section className="py-20 px-6 bg-white">
@@ -63,10 +65,12 @@ export default function ActionHubSection() {
               <p className="text-slate-600 text-sm leading-relaxed mb-8 flex-grow font-instrument-sans">
                 {hub.desc}
               </p>
-              <button
-                className={`w-full py-3.5 rounded-full text-white font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-instrument-sans ${hub.themeColor}`}>
-                {hub.btnText} <ArrowRight size={16} />
-              </button>
+              <Link
+  href={hub.link}
+  className={`w-full py-3.5 rounded-full text-white font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-instrument-sans ${hub.themeColor}`}
+>
+  {hub.btnText} <ArrowRight size={16} />
+</Link>
             </div>
           ))}
         </div>
