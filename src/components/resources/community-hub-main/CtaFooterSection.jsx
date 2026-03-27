@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 
 export default function CtaSection() {
@@ -13,9 +13,11 @@ export default function CtaSection() {
           Our active members have reduced implementation time by 40% using
           community-shared templates. Don't build alone.
         </p>
-        <button className="bg-white text-[#1B1464] px-10 py-4 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors shadow-lg font-instrument-sans inline-flex items-center justify-center">
+        <Link
+         href="/home/resources/community-hub/evolution-two"
+         className="bg-white text-[#1B1464] px-10 py-4 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors shadow-lg font-instrument-sans inline-flex items-center justify-center">
           Register Your Profile Today
-        </button>
+        </Link>
       </div>
     </section>
   );
