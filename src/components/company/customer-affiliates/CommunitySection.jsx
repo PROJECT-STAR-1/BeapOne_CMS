@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 
 export default function CommunitySection() {
@@ -13,9 +13,11 @@ export default function CommunitySection() {
           Discuss strategies, share tips, and compete on the affiliate
           leaderboards in the Community Hub.
         </p>
-        <button className="bg-white text-[#1B1464] px-8 py-3.5 rounded-full font-bold text-sm md:text-base shadow-lg transition-all duration-300 hover:scale-105 hover:bg-indigo-50">
+        <Link
+         href="/home/resources/community-hub/evolution-two"
+         className="bg-white text-[#1B1464] px-8 py-3.5 rounded-full font-bold text-sm md:text-base shadow-lg transition-all duration-300 hover:scale-105 hover:bg-indigo-50">
           Go to Community Hub
-        </button>
+        </Link>
       </div>
     </section>
   );

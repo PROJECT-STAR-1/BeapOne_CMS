@@ -27,7 +27,7 @@ export default function Home() {
 
           <div className="flex justify-center gap-4">
             <Link
-            href="/home/resources/community-hub/evolution-two"
+            href="#enroll"
              className="bg-white text-[#2d2a87] px-6 py-3 rounded-full font-semibold shadow">
               Enroll Now (1-Click)
             </Link>
@@ -93,7 +93,9 @@ export default function Home() {
       </section>
 
       {/* CTA / FORM */}
-      <section className="bg-[#0f172a] text-white py-20 px-6">
+      <section 
+      id="enroll"
+      className="bg-[#0f172a] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT */}
           <div>
