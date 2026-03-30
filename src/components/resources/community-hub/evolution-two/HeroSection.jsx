@@ -168,11 +168,11 @@ export default function HeroSection({ contributionType, setContributionType }) {
             <p className="text-center text-[10px] font-bold text-slate-500 mt-4">
               Already have a profile?{" "}
               <a
-                href="#"
+                href="/auth/login"
                 title="Pending Connection"
                 className="text-[#1B1464] hover:underline"
               >
-                Sync via Hub G
+                Sign In
               </a>
             </p>
           </div>

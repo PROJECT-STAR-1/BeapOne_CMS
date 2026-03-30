@@ -8,6 +8,14 @@ export const signupSchema = z.object({
 
   organizationName: z.string().min(2, "Organization name required"),
   organizationType: z.string().min(1, "Select organization type"),
+
+  signupFor: z.enum(
+    ["Affiliate", "Resellers", "Partners", "Community Hub"],
+    {
+      errorMap: () => ({ message: "Please select what you are signing up for" })
+    }
+  ),
+
   jobTitle: z.string().min(2, "Job title required"),
   department: z.string().min(2, "Department required"),
 

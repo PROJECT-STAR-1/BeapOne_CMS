@@ -173,7 +173,7 @@ export default function Home() {
         {/* Button */}
         <div className="mt-8">
           <Link 
-          href="/home/resources/community-hub/evolution-two"
+          href="/auth/login"
           className="inline-flex items-center gap-2 bg-[#2d2a7f] hover:bg-[#24216a] text-white font-medium px-6 py-3 rounded-full transition-all">
             Join the Affiliate Network
             <ArrowRight size={18} />

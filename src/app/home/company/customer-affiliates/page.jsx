@@ -27,9 +27,9 @@ export default function Home() {
 
           <div className="flex justify-center gap-4">
             <Link
-            href="#enroll"
+            href="/auth/login"
              className="bg-white text-[#2d2a87] px-6 py-3 rounded-full font-semibold shadow">
-              Enroll Now (1-Click)
+              Enroll Now 
             </Link>
             <Link 
               href="/home/company/customer-affiliates/howItWorks"
@@ -93,21 +93,21 @@ export default function Home() {
       </section>
 
       {/* CTA / FORM */}
-      <section 
+      {/* <section 
       id="enroll"
       className="bg-[#0f172a] text-white py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"> */}
           {/* LEFT */}
-          <div>
+          {/* <div>
             <h2 className="text-4xl font-bold mb-8">
               Join the Ecosystem in Seconds.
-            </h2>
+            </h2> */}
 
-            <Steps />
-          </div>
+            {/* <Steps />
+          </div> */}
 
           {/* RIGHT CARD */}
-          <div className="bg-white text-gray-900 rounded-xl p-8 shadow-lg">
+          {/* <div className="bg-white text-gray-900 rounded-xl p-8 shadow-lg">
             <p className="text-sm font-semibold mb-4">
               CONFIRM PAYOUT CURRENCY
             </p>
@@ -139,7 +139,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+ */}
 
       <CommunitySection />
     </main>

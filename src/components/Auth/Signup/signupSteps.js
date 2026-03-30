@@ -16,6 +16,7 @@ export const signupSteps = [
     fields: [
       "organizationName",
       "organizationType",
+      "signupFor",
       "jobTitle",
       "department",
       "employees",
