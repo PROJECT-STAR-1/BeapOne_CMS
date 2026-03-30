@@ -109,7 +109,7 @@ export default function HeroSection({
             {/* Form Inputs */}
             <div className="space-y-5 mb-8">
               {/* Identity Display Name */}
-              <div>
+              {/* <div>
                 <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">
                   IDENTITY DISPLAY NAME
                 </label>
@@ -120,7 +120,7 @@ export default function HeroSection({
                   placeholder="e.g. Architect_Alpha"
                   className="w-full bg-[#F8F9FB] border border-gray-100 text-slate-800 placeholder:text-slate-400 rounded-xl py-3.5 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B1464] transition-shadow shadow-sm font-medium"
                 />
-              </div>
+              </div> */}
 
               {/* Primary Hub Focus Dropdown Simulation */}
               {/* <div>
@@ -150,7 +150,7 @@ export default function HeroSection({
 
             {/* Continue Registration Button */}
             <a
-              href="#"
+              href="/auth/signup"
               className="w-full bg-black text-white text-[10px] font-bold uppercase tracking-widest py-4 px-6 rounded-xl hover:bg-gray-800 transition-all shadow-md flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black"
             >
               CONTINUE REGISTRATION <ArrowRight size={14} strokeWidth={2.5} />
@@ -160,11 +160,11 @@ export default function HeroSection({
             <p className="text-center text-[10px] font-bold text-slate-500 mt-4">
               Already have a profile?{" "}
               <a
-                href="#"
+                href="/auth/login"
                 title="Pending Connection"
                 className="text-[#1B1464] hover:underline"
               >
-                Sync via Hub G
+                Sign In
               </a>
             </p>
           </div>
