@@ -37,6 +37,23 @@ export default function Organization({ next, back }) {
         </select>
       </div>
 
+
+{/* What are you signing up for */}
+<div>
+  <label className="block text-sm font-medium text-gray-700 mb-2">
+    What are you signing up for? <span className="text-red-500">*</span>
+  </label>
+  <select
+    {...register("signupFor")}
+    className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+  >
+    <option value="">Select an option</option>
+    <option value="Affiliate">Affiliate</option>
+    <option value="Resellers">Resellers</option>
+    <option value="Partners">Partners</option>
+    <option value="Community Hub">Community Hub</option>
+  </select>
+</div>
       {/* Job + Department */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
