@@ -61,7 +61,7 @@ const menu = [
     {
       label: "Ballot Selection",
       icon: UserCheck,
-      href: "/voting/candidates",
+      href: "/home/communityHubDashboard/votingElections/ballot",
       description: "Candidate voting (Step 1)",
     },
   ],
@@ -131,63 +131,76 @@ const menu = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 h-screen sticky top-0 bg-white border-r flex flex-col">
+    <aside className="w-64 h-screen sticky top-0 bg-gray-50 border-r border-gray-200 flex flex-col">
   
   {/* Scrollable Area */}
   <div className="flex-1 overflow-y-auto px-4 py-6">
     
     {/* Logo */}
-    <div className="flex items-center gap-2 mb-6">
-      <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">
+    <div className="flex items-center gap-3 mb-8 px-2">
+      <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold shadow-sm">
         C
       </div>
-      <span className="font-semibold">C23 COMMUNITY</span>
+      <span className="font-semibold text-gray-800 text-sm tracking-tight">
+        C23 COMMUNITY
+      </span>
     </div>
 
     {/* Menu */}
-    <nav className="space-y-6">
+    <nav className="space-y-8">
       {menu.map((group, i) => (
         <div key={i}>
-        <div className="text-xs text-gray-400 tracking-wider mb-2 px-2">
-  {group.section}
-</div>
+          
+          {/* Section Title */}
+          <div className="text-[11px] font-semibold text-gray-400 tracking-widest px-2 mb-3">
+            {group.section}
+          </div>
 
-          {group.description && (
-            <div className="text-[11px] text-gray-400 mb-2">
-              {group.description}
-            </div>
-          )}
-
-          <div className="space-y-1 mt-1">
+          {/* Items */}
+          <div className="space-y-1">
             {group.items.map((item, idx) => {
               const Icon = item.icon;
 
               return (
-    <Link
-  key={idx}
-  href={item.href}
-  className={`flex items-start gap-3 px-3 py-2 rounded-xl transition-all
-    ${item.active ? "bg-blue-50 text-blue-600" : "hover:bg-gray-100"}
-  `}
->
-  {/* ICON COLUMN */}
-  <div className="mt-0.5">
-    {Icon && <Icon size={18} className="text-gray-500" />}
-  </div>
+                <Link
+                  key={idx}
+                  href={item.href}
+                  className={`group flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200
+                    ${
+                      item.active
+                        ? "bg-blue-50 text-blue-600 shadow-sm"
+                        : "text-gray-600 hover:bg-gray-100"
+                    }
+                  `}
+                >
+                  {/* ICON */}
+                  {Icon && (
+                    <Icon
+                      size={18}
+                      className={`transition-colors
+                        ${
+                          item.active
+                            ? "text-blue-600"
+                            : "text-gray-400 group-hover:text-gray-600"
+                        }
+                      `}
+                    />
+                  )}
 
-  {/* TEXT COLUMN */}
-  <div className="flex flex-col leading-tight">
-    <span className="text-sm font-medium">
-      {item.label}
-    </span>
+                  {/* TEXT */}
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-sm font-medium">
+                      {item.label}
+                    </span>
 
-    {item.description && (
-      <span className="text-xs text-gray-400 mt-0.5">
-        {item.description}
-      </span>
-    )}
-  </div>
-</Link>       );
+                    {item.description && (
+                      <span className="text-xs text-gray-400 mt-0.5">
+                        {item.description}
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              );
             })}
           </div>
         </div>
@@ -195,17 +208,20 @@ export default function Sidebar() {
     </nav>
   </div>
 
-  {/* Fixed Bottom Card */}
-  <div className="p-4 border-t">
-    <div className="bg-indigo-800 text-white p-4 rounded-xl">
-      <div className="text-xs opacity-70 mb-1">
-        NEXT MILESTONE
+  {/* Bottom Card */}
+  <div className="p-4 border-t border-gray-200">
+    <div className="bg-gradient-to-br from-indigo-900 to-indigo-700 text-white p-5 rounded-2xl shadow-md">
+      
+      <div className="text-[11px] uppercase tracking-widest opacity-70 mb-2">
+        Next Milestone
       </div>
-      <div className="text-sm font-semibold mb-3">
+
+      <div className="text-sm font-semibold leading-snug mb-4">
         Level up to stand for election!
       </div>
-      <button className="bg-blue-500 w-full py-2 rounded-lg text-sm">
-        VIEW PATH
+
+      <button className="w-full bg-blue-500 hover:bg-blue-400 transition-colors text-sm font-medium py-2.5 rounded-xl">
+        View Path
       </button>
     </div>
   </div>
