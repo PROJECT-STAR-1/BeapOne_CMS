@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { signupUser } from "@/api/auth"
+import { signupUser } from "@/app/api/auth"
 import { setAuth } from "@/utils/auth"
 import { useForm, FormProvider } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
