@@ -77,7 +77,7 @@ const menu = [
       {
         label: "Election Cycle",
         icon: BarChart3,
-        href: "/archive/metrics",
+        href: "/home/communityHubDashboard/electionCycle",
         description: "2026–2028 nominations",
       },
       {

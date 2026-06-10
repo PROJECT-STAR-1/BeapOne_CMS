@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { signupUser } from "@/api/auth"
+import { setAuth } from "@/utils/auth"
 import { useForm, FormProvider } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
@@ -11,6 +13,10 @@ import { signupSteps } from "./signupSteps"
 import Stepper from "./Stepper"
 
 export default function SignupForm() {
+
+  const [loading, setLoading] = useState(false)
+const [error, setError] = useState("")
+
 
   const router = useRouter()
   const [step, setStep] = useState(0)
@@ -34,12 +40,24 @@ export default function SignupForm() {
 
   const back = () => setStep((s) => s - 1)
 
-  const submit = async (data) => {
-    console.log("FORM DATA:", data)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    router.push("/auth/login?created=true")
-  }
+ const submit = async (data) => {
+  setLoading(true)
+  setError("")
 
+  try {
+    const res = await signupUser(data)
+
+    // Save token + user
+    setAuth(res)
+
+    // Redirect
+    router.push("/dashboard")
+  } catch (err) {
+    setError(err.message || err.error || "Signup failed")
+  } finally {
+    setLoading(false)
+  }
+}
   return (
 
     <div className="min-h-screen flex items-center justify-center px-4">

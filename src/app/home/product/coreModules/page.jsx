@@ -24,6 +24,10 @@ const modules = [
     icon: Building2,
     subModules: [
       {
+        id: "b",
+        label: "B: Enterprise & Organizational Structure Management",
+      },
+      {
         id: "b1",
         label: "B1: Legal Entity & Corporate Relationship Management",
       },
@@ -35,28 +39,26 @@ const modules = [
         id: "b3",
         label: "B3: Individual & Team Placement",
       },
+
       {
         id: "b4",
         label: "B4: Team-Level Management Integration",
-        children: [
-          {
-            id: "b4-1",
-            label: "B4-1: Team Management",
-          },
-          {
-            id: "b4-2",
-            label: "B4-2: Role Alignment",
-          },
-          {
-            id: "b4-3",
-            label: "B4-3: Reporting Structure",
-          },
-        ],
       },
-
-      {
+       {
         id: "b5",
         label: "B5: Project Lifecycle Structure Definition",
+      },
+       {
+        id: "b6",
+        label: "B6: Goal Management Hierarchy Definition",
+      },
+       {
+        id: "b7",
+        label: "B7: Reporting Line Management",
+      },
+       {
+        id: "b8",
+        label: "B8: Cross-Entity Visibility",
       },
     ],
   },
@@ -82,15 +84,20 @@ const modules = [
 
 const content = {
   enterprise: {
+     b: {
+      title: "Enterprise & Organizational Structure Management",
+      description:
+        "The Aim: To provide a definitive, high-fidelity structural backbone that maps complex corporate identities and internal hierarchies to operational execution.\nCore Features & Business Impact\nDynamic Entity Classification: Precision modeling of diverse legal structures, from Standalone Companies to complex Holding Groups, Subsidiaries, and Joint Ventures.\nUser Appeal: Automatically aligns your digital platform with your legal reality, ensuring accurate compliance, billing, and multi-entity governance.\nNode-Based Hierarchy Architect: A flexible, visual tool for building intricate internal organizational charts (Boards, Departments, Units) with embedded team placement.\nUser Appeal: Mirrors your real-world workflows and reporting lines, eliminating the friction of \"shadow\" structures and disconnected teams.\nIntegrated PPPM & Goal Tiering: Native enforcement of project lifecycles (Portfolio to Activity) and strategic goal hierarchies.\nUser Appeal: Ensures that every task and project is programmatically linked to a specific organizational unit, creating 100% alignment between structure and strategy.\nEcosystem Connectivity\nUpstream Synergy: Consumes core User Profiles (A2.1) and onboarding data to establish the initial corporate footprint.\nDownstream Value: Provides the essential \"Organizational Context\" required by the Financial Management (O) and Team Management modules for accurate cost-allocation and workload analytics.",
+    },
     b1: {
       title: "Legal Entity & Corporate Relationship Management",
       description:
-        "Defines and maintains all registered legal entities within the enterprise, including subsidiaries, holding companies, joint ventures, and external affiliations. This module ensures compliance readiness, accurate ownership mapping, and reliable group-level reporting across jurisdictions.",
+        "The Aim: To establish an immutable, verifiable digital identity for every organization on the platform, ensuring that complex corporate structures are translated into seamless operational reality.\nCore Features & Business Impact\nUniversal Entity Classifier: Accurately catalogues every registrant—from Private Limited Companies and Cooperatives to NGOs and Individuals.\nUser Appeal: Ensures your platform environment is perfectly tailored to your legal status, automating the complexities of regional compliance and industry-specific defaults.\nCorporate Relationship Architect: A guided interface for mapping \"Holding-Subsidiary,\" \"Affiliate,\" and \"Joint Venture\" (JVCo) links with precise ownership percentages.\nUser Appeal: Enables \"Group-Level\" power, allowing parent companies to manage resources and view performance across their entire portfolio without manual data consolidation.\nAutomated Group Derivation: Intelligently identifies \"Groups of Companies\" based on equity links to apply collective policies and billing logic.\nUser Appeal: Unlocks volume discounts and unified governance, ensuring that related entities move as a single, coordinated force.\nEcosystem Connectivity\nUpstream Synergy: Receives initial onboarding triggers from the Business Support System (A1) to verify legal standing.\nDownstream Value: Hardcodes the \"Visibility Rules\" for the Team Management Module, defining exactly how workload and performance data can be aggregated at a group level.",
     },
     b2: {
       title: "Internal Organizational Hierarchy Management",
       description:
-        "Provides a structured framework for modeling internal organizational hierarchies, including divisions, departments, and functional units. Enables clear accountability, scalable governance, and consistent alignment between strategy and execution.",
+        "The Aim: To provide a dynamic and flexible blueprint that mirrors your real-world operational structure, ensuring every department, unit, and team is perfectly positioned for peak execution.\nCore Features & Business Impact\nMulti-Level Hierarchy Architect: Effortlessly build complex, nested organizational charts from top-level Directorates down to specialized functional sections.\nUser Appeal: Eliminates structural ambiguity by providing a \"Single Source of Truth\" for your internal design, ensuring that workflows and approvals always find the right desk.\nInteractive Org Chart Visualizer: A high-fidelity, drag-and-drop tool to explore, modify, and communicate your company structure in real-time.\nUser Appeal: Empowers leadership with \"Clarity at a Glance,\" allowing you to see exactly where your human capital and teams are deployed across the enterprise.\nTeam-Unit Embedding: Seamlessly anchors specialized teams (from the Team Management Module) into their correct departmental context.\nUser Appeal: Transforms your org chart from a static picture into a live operational hub, enabling direct comparison of team performance and workloads by department.\nEcosystem Connectivity\nUpstream Synergy: Triggered by the legal entity creation in Module B1; every internal hierarchy is rooted in a validated corporate identity.\nDownstream Value: Provides the essential OrgUnitID required by the Financial (O) and Team Management modules to roll up costs and aggregate productivity reports by department.",
     },
     b3: {
       title: "Individual & Team Placement",
