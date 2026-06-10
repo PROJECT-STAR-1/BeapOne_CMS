@@ -37,43 +37,163 @@ function CTAButton({ icon, label, primary = false }) {
 /* ---------- Config ---------- */
 const leftTabs = [
   { id: "realtime", label: "Advanced Data Telemetry & BI", icon: BarChart3 },
-  { id: "commerce", label: "Mandatory E-Commerce Suite", icon: ShoppingCart },
-  { id: "collab", label: "Integrated Collaboration", icon: Users },
-  { id: "security", label: "Security & Compliance", icon: ShieldCheck },
-  { id: "growth", label: "Win More Customers", icon: Target },
-  { id: "employees", label: "Manage Your Employees", icon: UserCog },
-  { id: "finance", label: "Track Your Finances", icon: Wallet },
-  { id: "performance", label: "Monitor Team Performance", icon: Activity },
+  { id: "commerce", label: " E-Commerce & Supply Chain Integration", icon: ShoppingCart },
+  { id: "collab", label: " Contextual Collaboration & Project Management", icon: Users },
+  { id: "security", label: "Security, Compliance & Governance", icon: ShieldCheck },
+  { id: "growth", label: "High-Velocity Customer Acquisition", icon: Target },
+  { id: "employees", label: "Workforce & Performance Optimization", icon: UserCog },
+  { id: "finance", label: "Institutional Finance & Transparency", icon: Wallet },
+  { id: "performance", label: "Team Productivity & Predictive Scheduling", icon: Activity },
 ];
 
 const rightTabs = [
   { id: "live", label: "Video Conferencing" },
   { id: "calendar", label: "Google Calendar" },
   { id: "messages", label: "Dedicated Message Centre" },
-  { id: "meet", label: "Google Meet" },
 ];
 
 const content = {
   realtime: {
     live: {
-      title: "Real-Time Video Intelligence",
+      title: "Live Operational Audits",
       description:
-        "Access live telemetry and visual analytics in real time. Make faster decisions with continuously updated dashboards designed for operational clarity and executive insight.",
+        "Stream 4K video alongside real-time IoT telemetry (e.g., pond pH, warehouse humidity) for immersive remote inspections.",
     },
     calendar: {
-      title: "Analytics-Driven Scheduling",
+      title: "Predictive Foresight",
       description:
-        "Align operational data with calendar events to understand performance patterns, resource utilization, and time-based trends effortlessly.",
+        "AI-driven financial modeling (O10) forecasts cash flow and alerts managers to budget overruns months in advance.",
     },
     messages: {
-      title: "Centralized BI Notifications",
+      title: "Automated Compliance",
       description:
-        "Receive automated insights, alerts, and summaries directly in a unified messaging hub so nothing critical is ever missed.",
+        " Instantly generate audit-ready reports for any subsidiary or joint venture, covering taxation and legal status.",
     },
-    meet: {
-      title: "Meetings Backed by Data",
+  },
+
+  commerce: {
+    live: {
+      title: "Real-Time Inventory Sync",
       description:
-        "Enhance meetings with live data overlays and post-session analytics that turn conversations into measurable outcomes.",
+        " A sale on the web storefront (I1) instantly triggers harvest tasks (N5) and updates warehouse stock.",
+    },
+    calendar: {
+      title: "Perishable Asset Tracking",
+      description:
+        "Full cold-chain telemetry (M4.1) ensures product integrity from the distribution center to the customer.",
+    },
+    messages: {
+      title: "Automated Financial Handshake",
+      description:
+        "Orders automatically trigger Accounts Receivable and Revenue Recognition workflows.",
+    },
+  },
+
+  collab: {
+    live: {
+      title: "Unified Message Centre",
+      description:
+        "Sync Google Meet, Calendar, and internal Memos into a single hub linked directly to specific customers or projects.",
+    },
+    calendar: {
+      title: "Context-Aware Project Rooms",
+      description:
+        "Secure workspaces that consolidate documents, journals, and schedules for specific project teams.",
+    },
+    messages: {
+      title: "Meeting Intelligence",
+      description:
+        " Automated analysis of meeting notes to suggest and assign tasks to relevant organizational units.",
+    },
+  },
+
+  security: {
+    live: {
+      title: "Data Residency Enforcement",
+      description:
+        " Automated monitoring to ensure global nodes comply with regional laws like GDPR and NDPR.",
+    },
+    calendar: {
+      title: "Forensic Audit Trails",
+      description:
+        "An immutable journaling layer captures every change to legal entities and financials for an unalterable history.",
+    },
+    messages: {
+      title: "Automated HSE Reporting",
+      description:
+        "Anomaly detection via farm telemetry automatically triggers incident reports and escalation paths.",
+    },
+  },
+
+  growth: {
+    live: {
+      title: "AI Sales Forecasting",
+      description:
+        "Analyzes deal velocity to generate precise revenue outlooks.",
+    },
+    calendar: {
+      title: "Hyper-Personalized Marketing",
+      description:
+        "Segments customers based on CRM and service request history for targeted campaigns.",
+    },
+    messages: {
+      title: "Frictionless Onboarding",
+      description:
+        "Automated workflows guide new customers through legal entity and organizational hierarchy setup.",
+    },
+  },
+
+  employees: {
+    live: {
+      title: "Workforce Telemetry",
+      description:
+        "Real-time monitoring of task loads across all units to identify overloaded or under-utilized staff.",
+    },
+    calendar: {
+      title: "Matrix Management",
+      description:
+        " Supports complex dotted-line reporting structures to ensure accurate workflow routing.",
+    },
+    messages: {
+      title: "Continuous Impact Tracking",
+      description:
+        " Replaces annual reviews with real-time KPI progress and individual impact tracking against company goals.",
+    },
+  },
+
+  finance: {
+    live: {
+      title: "Automated General Ledger",
+      description:
+        "Real-time posting of transactions from e-commerce, supply chain, and asset depreciation.",
+    },
+    calendar: {
+      title: "Drill-Down Profitability",
+      description:
+        "Assigns costs (payroll, procurement, feed) against specific projects or portfolios for granular analysis.",
+    },
+    messages: {
+      title: "Multi-Currency Roll-up",
+      description:
+        "Automatically converts subsidiary financials into the HoldCo's functional currency while calculating localized taxes.",
+    },
+  },
+
+  performance: {
+    live: {
+      title: "Benchmarking Dashboards",
+      description:
+        "Compare workload and performance across different teams and organizational units.",
+    },
+    calendar: {
+      title: "Milestone Prediction",
+      description:
+        "AI predicts potential schedule slides and suggests change management workflows to prevent delays.",
+    },
+    messages: {
+      title: "Lessons Learned Hub",
+      description:
+        "Captures project insights to refine future business templates and share best practices across the community.",
     },
   },
 };
@@ -90,17 +210,22 @@ export default function FeaturesPage() {
       {/* Hero */}
       <div className="bg-[#1B1464]">
         <div className="mx-auto max-w-7xl px-6 py-14 text-white">
-           <h1 className="mt-2 text-4xl font-semibold">All Features</h1>
-          <p className="text-sm opacity-80">Product Overview /<span className="font-medium text-blue-400"> Features</span></p>
-         
+          <h1 className="mt-2 text-4xl font-semibold">All Features</h1>
+          <p className="text-sm opacity-80">
+            Product Overview /
+            <span className="font-medium text-blue-400"> Features</span>
+          </p>
         </div>
       </div>
 
       {/* Intro */}
       <div className="mx-auto max-w-7xl px-6 py-8">
         <p className="max-w-3xl text-sm text-gray-600">
-          BEAPOne UBOS is built for growth, offering unparalleled flexibility and
-          a smooth transition to a more productive way of working.
+          BEAPOne UBOS is a high-velocity SaaS platform designed to bridge the
+          gap between "Bricks and Mortar" operations and "Global Institutional"
+          finance. It provides a unified command center for organizations
+          managing complex supply chains, biotechnology production, and
+          multi-national corporate structures.
         </p>
       </div>
 
@@ -180,7 +305,7 @@ export default function FeaturesPage() {
         <div className="flex flex-wrap justify-end gap-3">
           <CTAButton
             icon={<Download className="h-4 w-4" />}
-            label="Download Capabilities Catalogue"
+            label="Download Features Catalogue"
           />
           <CTAButton
             icon={<MessageCircle className="h-4 w-4" />}
